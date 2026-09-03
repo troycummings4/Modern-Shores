@@ -1,8 +1,11 @@
 # Modern Shores
 
 A modern, Touch of Modern–inspired affiliate shopping site for curated,
-ridiculously cool products (gadgets, home finds, outdoor gear, and general
-"why do I need this but also I need this" novelty items).
+high-ticket "wait, where did you get that?" products (gadgets, home
+upgrades, outdoor gear, and statement pieces). The catalog is intentionally
+premium-only — affiliate commissions are a percentage of order value, so a
+higher average order value means meaningfully more revenue per sale at the
+same traffic and the same commission rate.
 
 Built with React + TypeScript + Vite + Tailwind CSS.
 
@@ -16,7 +19,8 @@ Built with React + TypeScript + Vite + Tailwind CSS.
 - **About, Contact, and Affiliate Disclosure pages** (FTC-compliant
   disclosure required for any affiliate site)
 - Fully responsive, mobile-first layout
-- 36 demo products across 6 categories in `src/data/products.ts`
+- 30 demo products (all $250+, avg. order value ~$950) across 6 categories
+  in `src/data/products.ts`
 
 ## Getting started
 

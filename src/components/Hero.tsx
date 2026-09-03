@@ -1,10 +1,16 @@
 import { Link } from "react-router-dom";
 import { productImage } from "../lib/affiliate";
+import { products } from "../data/products";
+import { formatPrice } from "../lib/format";
+
+const avgOrderValue = Math.round(
+  products.reduce((sum, p) => sum + p.price, 0) / products.length
+);
 
 const FLOATERS = [
-  { seed: "levitating-speaker", className: "left-2 top-6 h-28 w-28 sm:h-36 sm:w-36", delay: "0s" },
-  { seed: "galaxy-projector", className: "right-4 top-16 h-24 w-24 sm:h-32 sm:w-32", delay: "1.2s" },
-  { seed: "unicorn-float", className: "left-10 bottom-4 h-24 w-24 sm:h-32 sm:w-32", delay: "2.1s" },
+  { seed: "camera-drone", className: "left-2 top-6 h-28 w-28 sm:h-36 sm:w-36", delay: "0s" },
+  { seed: "espresso-machine", className: "right-4 top-16 h-24 w-24 sm:h-32 sm:w-32", delay: "1.2s" },
+  { seed: "cold-plunge", className: "left-10 bottom-4 h-24 w-24 sm:h-32 sm:w-32", delay: "2.1s" },
   { seed: "electric-skateboard", className: "right-10 bottom-10 h-28 w-28 sm:h-36 sm:w-36", delay: "0.6s" },
 ];
 
@@ -14,15 +20,15 @@ export default function Hero() {
       <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 py-16 sm:px-6 md:grid-cols-2 md:py-24 lg:px-8">
         <div className="relative z-10 text-shore-shell">
           <p className="mb-4 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-shore-aqua backdrop-blur">
-            Curated daily · New drops weekly
+            Premium finds only · New drops weekly
           </p>
           <h1 className="text-balance font-display text-4xl font-semibold leading-[1.05] sm:text-5xl lg:text-6xl">
-            Ridiculously cool finds you didn't know you needed.
+            Ridiculously cool, seriously worth it.
           </h1>
           <p className="mt-5 max-w-lg text-balance text-lg text-shore-shell/75">
             Modern Shores hand-picks the internet's most gorgeous, most
-            unnecessary, most "wait, where did you get that?" products — so
-            you don't have to dig for them.
+            "wait, where did you get that?" statement pieces — the kind of
+            investment buys worth researching before you click order.
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-4">
             <Link
@@ -40,8 +46,10 @@ export default function Hero() {
           </div>
           <div className="mt-10 flex items-center gap-6 text-sm text-shore-shell/60">
             <div>
-              <p className="font-display text-xl font-semibold text-white">150+</p>
-              <p>Curated products</p>
+              <p className="font-display text-xl font-semibold text-white">
+                {formatPrice(avgOrderValue)}
+              </p>
+              <p>Avg. order value</p>
             </div>
             <div className="h-8 w-px bg-white/20" />
             <div>
