@@ -33,33 +33,22 @@ npm run preview   # preview the production build locally
 
 ## Making it yours
 
-### 1. Activate real affiliate payouts (do this first)
+### 1. Affiliate payouts are already active
 
-Every "Shop Now" button on every product already routes through one
-function — `affiliateLink()` in `src/lib/affiliate.ts` — so turning on
-real commissions is a single change, not per-product work. Right now it
-falls back to an unregistered placeholder tag: **links work and customers
-can buy, but nobody gets paid until you plug in a real tag.**
+Every "Shop Now" button on every product routes through one function —
+`affiliateLink()` in `src/lib/affiliate.ts` — which has the real, live
+Amazon Associates tag (`051695-20`) baked in as the default. Nothing
+further to set up: every product on the site already earns a commission
+on qualifying purchases.
 
-**Get an Amazon Associates tag (free, fastest way to start):**
+Amazon closes an Associates account that hasn't generated 3 qualifying
+sales within 180 days of approval, so the main thing now is driving
+traffic (SEO, social, email) before that window closes, not further
+wiring.
 
-1. Go to [affiliate-program.amazon.com](https://affiliate-program.amazon.com)
-   and sign in with (or create) an Amazon account.
-2. Apply as an Associate — you'll need a live site URL, so deploy this
-   site first (see **Deploying** below) even before it's fully polished.
-3. During signup you'll pick a **Store ID / tracking ID** — this is your
-   tag (something like `modernshores-20`). You can also find/create one
-   later under Account Settings → Manage Tracking IDs.
-4. You're approved instantly in "trial" status, but Amazon closes the
-   account if you don't generate 3 qualifying sales within 180 days — so
-   don't let the site sit unlaunched for long after applying.
-5. Copy `.env.example` to `.env` and set:
-   ```
-   VITE_AMAZON_ASSOCIATE_TAG=your-real-tag-20
-   ```
-6. Rebuild/redeploy. Every product's "Shop Now" link now carries your real
-   tag — check the browser console in dev mode; the placeholder-tag
-   warning disappears once it's set correctly.
+Need to swap the tag later (a second account, a campaign-specific ID)?
+Copy `.env.example` to `.env` and set `VITE_AMAZON_ASSOCIATE_TAG` — it
+overrides the default without touching code.
 
 Amazon's cookie attributes *any* purchase in that browsing session to you,
 not just the exact item clicked — so even the generic search-result links
