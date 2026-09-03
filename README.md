@@ -33,19 +33,44 @@ npm run preview   # preview the production build locally
 
 ## Making it yours
 
-### 1. Swap in real affiliate links
+### 1. Activate real affiliate payouts (do this first)
 
-Right now every "Shop Now" button links to an Amazon search result via
-`src/lib/affiliate.ts`, using a placeholder tag (`modernshores-20`). Once
-you're approved for an affiliate program:
+Every "Shop Now" button on every product already routes through one
+function — `affiliateLink()` in `src/lib/affiliate.ts` — so turning on
+real commissions is a single change, not per-product work. Right now it
+falls back to an unregistered placeholder tag: **links work and customers
+can buy, but nobody gets paid until you plug in a real tag.**
 
-- **Amazon Associates**: replace `AFFILIATE_TAG` in `src/lib/affiliate.ts`
-  with your real tag, or better — give each product in
-  `src/data/products.ts` its own `affiliateUrl` field pointing at the exact
-  product page (search links convert worse than direct links).
-- **Other networks** (CJ, ShareASale, Impact, Rakuten, etc.): add an
-  `affiliateUrl` field per product and update `affiliateLink()` in
-  `src/lib/affiliate.ts` to return it directly.
+**Get an Amazon Associates tag (free, fastest way to start):**
+
+1. Go to [affiliate-program.amazon.com](https://affiliate-program.amazon.com)
+   and sign in with (or create) an Amazon account.
+2. Apply as an Associate — you'll need a live site URL, so deploy this
+   site first (see **Deploying** below) even before it's fully polished.
+3. During signup you'll pick a **Store ID / tracking ID** — this is your
+   tag (something like `modernshores-20`). You can also find/create one
+   later under Account Settings → Manage Tracking IDs.
+4. You're approved instantly in "trial" status, but Amazon closes the
+   account if you don't generate 3 qualifying sales within 180 days — so
+   don't let the site sit unlaunched for long after applying.
+5. Copy `.env.example` to `.env` and set:
+   ```
+   VITE_AMAZON_ASSOCIATE_TAG=your-real-tag-20
+   ```
+6. Rebuild/redeploy. Every product's "Shop Now" link now carries your real
+   tag — check the browser console in dev mode; the placeholder-tag
+   warning disappears once it's set correctly.
+
+Amazon's cookie attributes *any* purchase in that browsing session to you,
+not just the exact item clicked — so even the generic search-result links
+this site uses by default earn commission on whatever the visitor buys.
+
+**Want higher commission rates or a different network** (CJ, ShareASale,
+Impact, Rakuten, or a retailer's own affiliate program — often 8–20% vs.
+Amazon's ~1–4%)? Give each product in `src/data/products.ts` its own
+`affiliateUrl` field with the real tracking link from that network, and
+update `affiliateLink()` in `src/lib/affiliate.ts` to return it (falling
+back to the Amazon link for anything without one).
 
 ### 2. Swap in real product photography
 
