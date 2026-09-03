@@ -82,6 +82,46 @@ export const products: Product[] = [
     badges: ["Trending"],
     imageSeed: "robot-vacuum",
   },
+  {
+    slug: "curved-ultrawide-gaming-monitor",
+    name: "49-Inch Curved Ultrawide Gaming Monitor",
+    tagline: "Two monitors' worth of screen, zero bezel in the middle.",
+    description:
+      "A 32:9 curved super-ultrawide with a 240Hz refresh rate and DQHD resolution, replacing a dual-monitor setup with one seamless, immersive panel built for both gaming and spreadsheets.",
+    category: "tech-and-gadgets",
+    price: 999.0,
+    compareAtPrice: 1299.0,
+    rating: 4.6,
+    reviewCount: 341,
+    imageSeed: "ultrawide-monitor",
+  },
+  {
+    slug: "surround-sound-home-theater-system",
+    name: "7.1 Surround Sound Home Theater System",
+    tagline: "Every seat becomes the best seat.",
+    description:
+      "A wireless 7.1-channel speaker system with a dedicated subwoofer, calibrated automatically to your room's acoustics. Pairs with any TV or projector for genuine theater-grade sound.",
+    category: "tech-and-gadgets",
+    price: 799.0,
+    compareAtPrice: 999.0,
+    rating: 4.5,
+    reviewCount: 268,
+    badges: ["New"],
+    imageSeed: "surround-sound",
+  },
+  {
+    slug: "professional-resin-3d-printer",
+    name: "Professional Resin 3D Printer",
+    tagline: "Turn a screen full of ideas into an actual shelf full of them.",
+    description:
+      "High-resolution resin printing with a large build volume and an automatic resin-filling system, sized for hobbyists who've outgrown a starter printer but aren't running a print farm.",
+    category: "tech-and-gadgets",
+    price: 549.0,
+    compareAtPrice: 699.0,
+    rating: 4.4,
+    reviewCount: 152,
+    imageSeed: "resin-3d-printer",
+  },
 
   // Home & Living
   {
@@ -150,6 +190,47 @@ export const products: Product[] = [
     rating: 4.5,
     reviewCount: 64,
     imageSeed: "spiral-bookshelf",
+  },
+  {
+    slug: "electric-fireplace-tv-console",
+    name: "Electric Fireplace TV Console",
+    tagline: "Ambiance and a place for the soundbar.",
+    description:
+      "A media console with a realistic flame-and-ember electric fireplace built in — no venting, no gas line, just a remote-controlled fire under the TV and closed storage for everything else.",
+    category: "home-and-living",
+    price: 899.0,
+    compareAtPrice: 1199.0,
+    rating: 4.6,
+    reviewCount: 412,
+    badges: ["Trending"],
+    imageSeed: "fireplace-console",
+  },
+  {
+    slug: "standing-desk-storage",
+    name: "Designer Standing Desk with Built-In Storage",
+    tagline: "A desk that actually earns its floor space.",
+    description:
+      "A solid-wood-topped electric standing desk with programmable height presets and integrated drawer storage, built to look like furniture instead of office equipment.",
+    category: "home-and-living",
+    price: 649.0,
+    compareAtPrice: 849.0,
+    rating: 4.5,
+    reviewCount: 176,
+    imageSeed: "standing-desk",
+  },
+  {
+    slug: "whole-home-water-filtration",
+    name: "Whole-Home Smart Water Filtration System",
+    tagline: "Every tap in the house, upgraded at once.",
+    description:
+      "A point-of-entry filtration and softening system that treats water for the entire house, with app-based monitoring so you know exactly when a filter change is due.",
+    category: "home-and-living",
+    price: 799.0,
+    compareAtPrice: 999.0,
+    rating: 4.4,
+    reviewCount: 138,
+    badges: ["Staff Pick"],
+    imageSeed: "water-filtration",
   },
 
   // Kitchen & Bar
@@ -221,6 +302,47 @@ export const products: Product[] = [
     reviewCount: 198,
     imageSeed: "wine-fridge",
   },
+  {
+    slug: "built-in-outdoor-grill-island",
+    name: "Built-In Outdoor Kitchen Grill Island",
+    tagline: "The backyard upgrade that ends every debate about where to eat.",
+    description:
+      "A modular stainless grill island with a built-in burner, sink, and storage doors, designed to assemble on any patio without a full outdoor-kitchen renovation.",
+    category: "kitchen-and-bar",
+    price: 2499.0,
+    compareAtPrice: 3199.0,
+    rating: 4.7,
+    reviewCount: 84,
+    badges: ["Staff Pick"],
+    imageSeed: "grill-island",
+  },
+  {
+    slug: "stand-mixer-attachment-bundle",
+    name: "Professional Stand Mixer with Attachment Bundle",
+    tagline: "One motor, an absurd number of jobs.",
+    description:
+      "A heavy-duty stand mixer bundled with the pasta roller, meat grinder, and food processor attachments — the kitchen equivalent of buying the whole toolbox instead of one wrench.",
+    category: "kitchen-and-bar",
+    price: 549.0,
+    compareAtPrice: 699.0,
+    rating: 4.8,
+    reviewCount: 1893,
+    badges: ["Trending"],
+    imageSeed: "stand-mixer",
+  },
+  {
+    slug: "sous-vide-vacuum-sealer-bundle",
+    name: "Sous Vide Precision Cooker & Vacuum Sealer Bundle",
+    tagline: "Restaurant-precision doneness, every single time.",
+    description:
+      "A WiFi-connected immersion circulator paired with a chamber vacuum sealer, so you can portion, seal, and cook restaurant-precision meals without babysitting a pan.",
+    category: "kitchen-and-bar",
+    price: 349.0,
+    compareAtPrice: 449.0,
+    rating: 4.5,
+    reviewCount: 267,
+    imageSeed: "sous-vide-bundle",
+  },
 
   // Outdoor & Adventure
   {
@@ -291,6 +413,46 @@ export const products: Product[] = [
     reviewCount: 276,
     imageSeed: "solar-generator",
   },
+  {
+    slug: "gps-robotic-lawn-mower",
+    name: "GPS Robotic Lawn Mower",
+    tagline: "The lawn stays perfect and you never touch it.",
+    description:
+      "Maps your yard via GPS and mows on a schedule, rain or shine, with wire-free boundary setup. Quiet enough to run while you're still outside enjoying the yard it's mowing.",
+    category: "outdoor-and-adventure",
+    price: 999.0,
+    compareAtPrice: 1299.0,
+    rating: 4.5,
+    reviewCount: 312,
+    badges: ["Trending"],
+    imageSeed: "robotic-mower",
+  },
+  {
+    slug: "premium-inflatable-paddleboard-package",
+    name: "Premium Inflatable Paddleboard Touring Package",
+    tagline: "A full day on the water, packed into a backpack.",
+    description:
+      "A rigid, drop-stitch touring paddleboard with a carbon-hybrid paddle, action-mount points, and a high-pressure pump — deflates down to duffel size for a trunk that never has to plan ahead.",
+    category: "outdoor-and-adventure",
+    price: 449.0,
+    compareAtPrice: 599.0,
+    rating: 4.6,
+    reviewCount: 389,
+    imageSeed: "paddleboard",
+  },
+  {
+    slug: "cargo-roof-box-rack-system",
+    name: "High-Capacity Cargo Roof Box & Rack System",
+    tagline: "Suddenly the trunk isn't the limiting factor anymore.",
+    description:
+      "An aerodynamic, lockable roof cargo box paired with a full crossbar rack system, adding 18 cubic feet of gear space to any vehicle without touching the back seat.",
+    category: "outdoor-and-adventure",
+    price: 549.0,
+    compareAtPrice: 699.0,
+    rating: 4.5,
+    reviewCount: 201,
+    imageSeed: "cargo-roof-box",
+  },
 
   // Style & Carry
   {
@@ -359,6 +521,47 @@ export const products: Product[] = [
     rating: 4.5,
     reviewCount: 176,
     imageSeed: "carbon-luggage",
+  },
+  {
+    slug: "titanium-prescription-ready-sunglasses",
+    name: "Titanium Frame Sunglasses, Prescription-Ready",
+    tagline: "The pair you stop losing because you actually like them.",
+    description:
+      "Featherlight titanium frames with polarized, prescription-ready lenses and a lifetime hinge warranty — built to be the one pair you reach for, not a backup for the good ones.",
+    category: "style-and-carry",
+    price: 329.0,
+    compareAtPrice: 429.0,
+    rating: 4.6,
+    reviewCount: 288,
+    imageSeed: "titanium-sunglasses",
+  },
+  {
+    slug: "hardshell-luggage-set",
+    name: "Hard-Shell Check-In Luggage Set (3-Piece)",
+    tagline: "Matching bags for once in your life.",
+    description:
+      "A three-piece polycarbonate hard-shell set — carry-on, mid-size, and large check-in — with 360° spinner wheels and TSA locks, nested for compact closet storage between trips.",
+    category: "style-and-carry",
+    price: 649.0,
+    compareAtPrice: 849.0,
+    rating: 4.5,
+    reviewCount: 421,
+    badges: ["New"],
+    imageSeed: "luggage-set",
+  },
+  {
+    slug: "tailored-cashmere-overcoat",
+    name: "Tailored Cashmere Overcoat",
+    tagline: "The coat that makes the rest of the outfit irrelevant.",
+    description:
+      "100% cashmere, cut and tailored for a true fit rather than off-the-rack boxiness. The kind of coat you own one of, forever, instead of replacing every winter.",
+    category: "style-and-carry",
+    price: 549.0,
+    compareAtPrice: 749.0,
+    rating: 4.7,
+    reviewCount: 96,
+    badges: ["Staff Pick"],
+    imageSeed: "cashmere-overcoat",
   },
 
   // Just For Fun
@@ -430,6 +633,46 @@ export const products: Product[] = [
     reviewCount: 316,
     badges: ["New"],
     imageSeed: "karaoke-system",
+  },
+  {
+    slug: "home-batting-cage-pitching-machine",
+    name: "Home Batting Cage & Pitching Machine Package",
+    tagline: "The backyard becomes the backup practice field.",
+    description:
+      "A full-length net cage paired with an adjustable-speed pitching machine, turning any backyard into a real batting practice setup — no drives to the cage required.",
+    category: "just-for-fun",
+    price: 1299.0,
+    compareAtPrice: 1699.0,
+    rating: 4.5,
+    reviewCount: 78,
+    imageSeed: "batting-cage",
+  },
+  {
+    slug: "foosball-air-hockey-combo-table",
+    name: "Full-Size Foosball & Air Hockey Combo Table",
+    tagline: "Two rivalries, one table.",
+    description:
+      "A furniture-grade combo table that flips between regulation foosball and electric air hockey, built solid enough to actually live in a living room instead of a garage.",
+    category: "just-for-fun",
+    price: 899.0,
+    compareAtPrice: 1149.0,
+    rating: 4.6,
+    reviewCount: 194,
+    badges: ["Trending"],
+    imageSeed: "foosball-table",
+  },
+  {
+    slug: "premium-backyard-trampoline",
+    name: "Premium Large Trampoline with Safety Net",
+    tagline: "Cardio nobody has to be talked into.",
+    description:
+      "A 15-foot trampoline with a galvanized steel frame, enclosed safety net, and a wind-stake kit, built for daily use rather than one summer before it sags.",
+    category: "just-for-fun",
+    price: 649.0,
+    compareAtPrice: 849.0,
+    rating: 4.4,
+    reviewCount: 502,
+    imageSeed: "backyard-trampoline",
   },
 ];
 

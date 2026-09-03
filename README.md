@@ -19,8 +19,9 @@ Built with React + TypeScript + Vite + Tailwind CSS.
 - **About, Contact, and Affiliate Disclosure pages** (FTC-compliant
   disclosure required for any affiliate site)
 - Fully responsive, mobile-first layout
-- 30 demo products (all $250+, avg. order value ~$950) across 6 categories
-  in `src/data/products.ts`
+- 48 demo products (all $250+, 8 per category) across 6 categories in
+  `src/data/products.ts`, each already linking through the live Amazon
+  Associates tag
 
 ## Getting started
 
