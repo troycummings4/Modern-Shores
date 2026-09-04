@@ -1,11 +1,12 @@
 # Modern Shores
 
 A modern, Touch of Modern–inspired affiliate shopping site for curated,
-high-ticket "wait, where did you get that?" products (gadgets, home
-upgrades, outdoor gear, and statement pieces). The catalog is intentionally
-premium-only — affiliate commissions are a percentage of order value, so a
-higher average order value means meaningfully more revenue per sale at the
-same traffic and the same commission rate.
+high-ticket, genuinely wacky tech — robot dogs, racing sim cockpits,
+e-foils, AR glasses, humanoid robots. The catalog is intentionally
+premium-and-tech-only — affiliate commissions are a percentage of order
+value, so a higher average order value means meaningfully more revenue per
+sale at the same traffic and the same commission rate, and tech is what
+this kind of "wait, that's real?" content earns/shares best around.
 
 Built with React + TypeScript + Vite + Tailwind CSS.
 

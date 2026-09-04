@@ -5,6 +5,11 @@ SiteStripe (Amazon's official tool for approved Associates) rather than
 saving/right-clicking images — it's the sanctioned way to embed Amazon
 product photos and gives you a stable link.
 
+> **Note:** the catalog was rebuilt around high-ticket tech (robot dogs,
+> racing rigs, drones, etc.) — if you already gathered images from an
+> earlier version of this list, those products have changed and this
+> replaces that list.
+
 ## How to grab each image (~15–20 sec per product)
 
 1. Make sure you're logged into **amazon.com** with the account tied to
@@ -30,7 +35,41 @@ blank just keeps the current placeholder image.
 
 ---
 
-## Tech & Gadgets
+## Sim & Gaming Rigs
+
+- [ ] `racing-simulator-cockpit` — Racing Simulator Cockpit with Force Feedback Wheel
+  https://www.amazon.com/Adjustable-PC-Compatible-Mac-Linux-Unix/dp/B0CZ8VHKJR
+  Image URL:
+
+- [ ] `full-size-home-arcade-cabinet` — Full-Size Home Arcade Cabinet
+  https://www.amazon.com/Creative-Full-Size-Commercial-Machines-Woodgrain/dp/B09BXLZK1D
+  Image URL:
+
+- [ ] `curved-ultrawide-gaming-monitor` — 49-Inch Curved Ultrawide Gaming Monitor
+  https://www.amazon.com/INNOCN-Ultrawide-Computer-DisplayPort-Adjustable/dp/B0D1VHBPQT
+  Image URL:
+
+- [ ] `flight-sim-yoke-rudder-pedals` — Flight Sim Yoke & Rudder Pedals Bundle
+  https://www.amazon.com/Logitech-Professional-Simulation-Throttle-Programmable/dp/B09HRZZWR7
+  Image URL:
+
+- [ ] `full-motion-racing-simulator-platform` — Full-Motion Racing Simulator Platform
+  https://www.amazon.com/DOF-Reality-Motion-Simulator-Movements/dp/B07KRGRCQ8
+  Image URL:
+
+- [ ] `omnidirectional-vr-treadmill` — Omnidirectional VR Treadmill
+  https://www.amazon.com/CORE-Omnidirectional-Compatible-Game-Tuned-Enthusiasts/dp/B0DGGCBLM1
+  Image URL:
+
+- [ ] `high-performance-gaming-pc` — High-Performance Gaming PC (RTX 4070 Super)
+  https://www.amazon.com/Skytech-Azure-Gaming-14700F-GDDR6X/dp/B0CSJF4J5G
+  Image URL:
+
+- [ ] `haptic-feedback-gaming-pad` — Haptic Feedback Gaming Pad
+  https://www.amazon.com/Next-Level-Racing-HF8-Feedback-PC/dp/B0BQSTNFB1
+  Image URL:
+
+## Drones & Robotics
 
 - [ ] `pro-4k-camera-drone` — Professional 4K Camera Drone
   https://www.amazon.com/DJI-Dual-Camera-Wide-Angle-Dynamic-Transmission/dp/B07FVZFX73
@@ -40,99 +79,31 @@ blank just keeps the current placeholder image.
   https://www.amazon.com/Underwater-Camera-Finder-Submarine-Fishing/dp/B0CLRQW5K6
   Image URL:
 
-- [ ] `ultra-short-throw-projector` — Ultra Short-Throw 4K Home Theater Projector
-  https://www.amazon.com/Hisense-Laser-PX3-PRO-Projector-Contrast/dp/B0DGHZ1C8V
+- [ ] `fpv-racing-drone-combo` — FPV Racing Drone Combo with Goggles
+  https://www.amazon.com/DJI-Remote-Controller-Goggles-CP-FP-00000001-01/dp/B08Z3D2WB4
   Image URL:
 
-- [ ] `racing-simulator-cockpit` — Racing Simulator Cockpit with Force Feedback Wheel
-  https://www.amazon.com/Adjustable-PC-Compatible-Mac-Linux-Unix/dp/B0CZ8VHKJR
+- [ ] `robot-dog-companion` — Quadruped Robot Dog
+  https://www.amazon.com/Unitree-Quadruped-Robotics-Adults-Embodied/dp/B07TTRPFBT
   Image URL:
 
-- [ ] `self-emptying-robot-vacuum` — Self-Emptying Robot Vacuum & Mop
-  https://www.amazon.com/Self-Emptying-Robotic-Hands-Free-Cleaning-Navigation/dp/B0F385CGK4
+- [ ] `programmable-robotic-arm` — Programmable 6-Axis Robotic Arm
+  https://www.amazon.com/ELEPHANT-ROBOTICS-Raspberry-Collaborative-Education/dp/B0BQBHSNS8
   Image URL:
 
-- [ ] `curved-ultrawide-gaming-monitor` — 49-Inch Curved Ultrawide Gaming Monitor
-  https://www.amazon.com/INNOCN-Ultrawide-Computer-DisplayPort-Adjustable/dp/B0D1VHBPQT
+- [ ] `ai-desktop-robot-companion` — AI Desktop Robot Companion
+  https://www.amazon.com/EMOPET-Desk-Robot-Companion-Interactive/dp/B0DG8JPL6J
   Image URL:
 
-- [ ] `surround-sound-home-theater-system` — 7.1 Surround Sound Home Theater System
-  https://www.amazon.com/Fluance-Surround-Including-Floorstanding-Subwoofer/dp/B07984G7M9
+- [ ] `home-patrol-robot` — AI Home Patrol Robot
+  https://www.amazon.com/Introducing-Amazon-Astro/dp/B078NSDFSB
   Image URL:
 
-- [ ] `professional-resin-3d-printer` — Professional Resin 3D Printer
-  https://www.amazon.com/ANYCUBIC-Mono-Printer-LighTurbo-Printing/dp/B0DB887MCD
+- [ ] `humanoid-boxing-robot` — Humanoid Boxing & Dancing Robot
+  https://www.amazon.com/XiaoR-Geek-Humanoid-Graphical-Programmable/dp/B0BJYNGYG5
   Image URL:
 
-## Home & Living
-
-- [ ] `zero-gravity-massage-chair` — Zero-Gravity Full-Body Massage Chair
-  https://www.amazon.com/HealthRelife-Massage-Chair/dp/B0C1NFG2YK
-  Image URL:
-
-- [ ] `personal-infrared-sauna` — Personal Infrared Sauna Cabin
-  https://www.amazon.com/iDOTODO-Portable-Personal-Control-Recliner/dp/B0CR3LXXK8
-  Image URL:
-
-- [ ] `smart-adjustable-bed-frame` — Smart Adjustable Bed Frame
-  https://www.amazon.com/Renanim-Smart-Adjustable-Electric-Massage/dp/B0BQC9M8N9
-  Image URL:
-
-- [ ] `designer-propane-fire-pit-table` — Designer Propane Fire Pit Table
-  https://www.amazon.com/TLGREEN-Propane-Fire-Table-Round/dp/B0BMVWJSL6
-  Image URL:
-
-- [ ] `floating-spiral-bookshelf` — Floating Spiral Wall Bookshelf
-  https://www.amazon.com/Trailing-Spiral-Floating-Bookshelf-XL/dp/B01N0YIYF3
-  Image URL:
-
-- [ ] `electric-fireplace-tv-console` — Electric Fireplace TV Console
-  https://www.amazon.com/LUXOAK-Fireplace-Console-Electric-Entertainment/dp/B0C9QKHHBW
-  Image URL:
-
-- [ ] `standing-desk-storage` — Designer Standing Desk with Built-In Storage
-  https://www.amazon.com/Flexispot-Electric-Standing-Adjustable-Organizer/dp/B08SBL81LT
-  Image URL:
-
-- [ ] `whole-home-water-filtration` — Whole-Home Smart Water Filtration System
-  https://www.amazon.com/Waterdrop-WHF21-PG-Filtration-Sediment-Chlorine/dp/B08XXJSN29
-  Image URL:
-
-## Kitchen & Bar
-
-- [ ] `nugget-ice-maker` — Countertop Nugget Ice Maker
-  https://www.amazon.com/EASYERA-Countertop-Crushed-Chewble-Self-Cleaning/dp/B0C3R14HHC
-  Image URL:
-
-- [ ] `dual-tap-kegerator` — Dual-Tap Kegerator
-  https://www.amazon.com/Kegco-Kegerator-Dual-Stainless-Steel/dp/B08CJ72986
-  Image URL:
-
-- [ ] `prosumer-espresso-machine` — Prosumer Espresso Machine with Built-In Grinder
-  https://www.amazon.com/Breville-Dynamic-Espresso-Machine-Stainless/dp/B08ML986LF
-  Image URL:
-
-- [ ] `outdoor-wood-fired-pizza-oven` — Outdoor Wood-Fired Pizza Oven
-  https://www.amazon.com/PIZZELLO-Outdoor-Portable-Outside-Waterproof/dp/B09VXVV5FR
-  Image URL:
-
-- [ ] `dual-zone-wine-beverage-fridge` — Dual-Zone Wine & Beverage Fridge
-  https://www.amazon.com/NewAir-Stainless-Compressor-Removable-NWC046SS01/dp/B084Z3LZQ9
-  Image URL:
-
-- [ ] `built-in-outdoor-grill-island` — Built-In Outdoor Kitchen Grill Island
-  https://www.amazon.com/Outdoor-Kitchen-Island-6-Burner-Modular/dp/B0FCG62LDZ
-  Image URL:
-
-- [ ] `stand-mixer-attachment-bundle` — Professional Stand Mixer with Attachment Bundle
-  https://www.amazon.com/KitchenAid-Artisan-Grinder-Attachment-Bundle/dp/B0D413NZMM
-  Image URL:
-
-- [ ] `sous-vide-vacuum-sealer-bundle` — Sous Vide Precision Cooker & Vacuum Sealer Bundle
-  https://www.amazon.com/Anova-Culinary-Precision-Cooker-Storage/dp/B09L4Z1D3G
-  Image URL:
-
-## Outdoor & Adventure
+## Electric Rides
 
 - [ ] `all-terrain-electric-skateboard` — All-Terrain Electric Skateboard
   https://www.amazon.com/Hurricane-Off-Road-Skateboard-Ultra-Long-Professional/dp/B0BW3G3B4Y
@@ -142,94 +113,128 @@ blank just keeps the current placeholder image.
   https://www.amazon.com/Electric-with750W-Suspension-Mountain-Professional/dp/B0B48P17GF
   Image URL:
 
-- [ ] `premium-tandem-touring-kayak` — Premium Inflatable Tandem Touring Kayak
-  https://www.amazon.com/Danrelax-Inflatable-Drop-Stitch-Lightweight-Recreational/dp/B0FWRGHBWR
+- [ ] `self-balancing-electric-unicycle` — Self-Balancing Electric Unicycle
+  https://www.amazon.com/INMOTION-Electric-Unicycle-Self-Balancing-Built/dp/B093WY7411
   Image URL:
 
-- [ ] `hard-shell-rooftop-tent` — Hard-Shell Rooftop Tent
-  https://www.amazon.com/GEERTOP-Hard-Shell-Rooftop-Camping/dp/B0DCNYTR91
+- [ ] `electric-hydrofoil-surfboard` — Electric Hydrofoil Surfboard (eFoil)
+  https://www.amazon.com/Electric-Hydrofoil-Surfboard-High-Speed-Rechargeable/dp/B0G33PRRZK
+  Image URL:
+
+- [ ] `electric-drift-go-kart` — Electric Drift Go-Kart
+  https://www.amazon.com/JYXKART-Electric-Brushless-Removable-Lithium/dp/B0D3B1GZBH
+  Image URL:
+
+- [ ] `high-performance-electric-scooter` — High-Performance Dual-Motor Electric Scooter
+  https://www.amazon.com/%EF%BB%BFElectric-Scooter-High-Performance-Foldable-Scooter/dp/B0GH6SK9W3
+  Image URL:
+
+- [ ] `electric-dirt-bike` — Electric Dirt Bike
+  https://www.amazon.com/Freego-Electric-Motorcycle-Removable-Suspension/dp/B0D1VK94R1
   Image URL:
 
 - [ ] `portable-power-station-solar` — Portable Power Station with Solar Panel Kit
   https://www.amazon.com/Jackery-Generator-Portable-Charging-Emergencies/dp/B0DG8NXM21
   Image URL:
 
-- [ ] `gps-robotic-lawn-mower` — GPS Robotic Lawn Mower
-  https://www.amazon.com/Robot-Lawn-Mower-Wire-Intelligent/dp/B0DRCG92JQ
+## Home Theater & Audio
+
+- [ ] `ultra-short-throw-projector` — Ultra Short-Throw 4K Home Theater Projector
+  https://www.amazon.com/Hisense-Laser-PX3-PRO-Projector-Contrast/dp/B0DGHZ1C8V
   Image URL:
 
-- [ ] `premium-inflatable-paddleboard-package` — Premium Inflatable Paddleboard Touring Package
-  https://www.amazon.com/Buoy-Watersports-Inflatable-Touring-Paddleboard/dp/B0CZC4JCTM
+- [ ] `surround-sound-home-theater-system` — 7.1 Surround Sound Home Theater System
+  https://www.amazon.com/Fluance-Surround-Including-Floorstanding-Subwoofer/dp/B07984G7M9
   Image URL:
 
-- [ ] `cargo-roof-box-rack-system` — High-Capacity Cargo Roof Box & Rack System
-  https://www.amazon.com/VEVOR-Dual-Sided-Reinforced-Aerodynamic-Suitable/dp/B0DFPJQG58
+- [ ] `3d-holographic-fan-display` — 3D Holographic Fan Display
+  https://www.amazon.com/Integrated-19-Holographic-Advertising-Projector-Programmable/dp/B0BZ92855X
   Image URL:
 
-## Style & Carry
+- [ ] `premium-soundbar-sub-surround-bundle` — Premium Soundbar, Sub & Surround Speaker Bundle
+  https://www.amazon.com/Sonos-Ultra-soundbar-subwoofer-Speakers/dp/B0F93B9GRN
+  Image URL:
+
+- [ ] `4d-haptic-theater-recliner` — 4D Haptic Home Theater Recliner
+  https://www.amazon.com/AHMED-Recliner-Chair-Theater-Lighting/dp/B0D47N239Q
+  Image URL:
+
+- [ ] `premium-dolby-atmos-soundbar` — Premium 5.1.4 Dolby Atmos Soundbar
+  https://www.amazon.com/VIZIO-5-1-4-Premium-Sound-Virtual/dp/B07GTQWMYQ
+  Image URL:
+
+- [ ] `high-end-av-receiver` — High-End 9.2-Channel AV Receiver
+  https://www.amazon.com/YAMAHA-AVENTAGE-9-2-Channel-Receiver-MusicCast/dp/B08DXMTQ1N
+  Image URL:
+
+- [ ] `98-inch-neo-qled-tv` — 98-Inch Neo QLED 4K Mini-LED TV
+  https://www.amazon.com/SAMSUNG-Tracking-Xcelerator-Enhancer-QN98QN90D/dp/B0CV9GM5L3
+  Image URL:
+
+## Wearable Tech
 
 - [ ] `smart-fitness-ring` — Smart Fitness Ring
   https://www.amazon.com/ULTRAHUMAN-AIR-Smart-Tracker-Fitness-Titanium/dp/B0D9B9513X
-  Image URL:
-
-- [ ] `automatic-heritage-watch` — Automatic Heritage Watch
-  https://www.amazon.com/Automatic-Movement-Sapphire-Crystal-Italian/dp/B081HYZY5Q
-  Image URL:
-
-- [ ] `full-grain-leather-weekender` — Full-Grain Leather Weekender Bag
-  https://www.amazon.com/Polare-Genuine-Leather-Weekender-luggage/dp/B078B91TNT
   Image URL:
 
 - [ ] `heated-smart-jacket` — Heated Smart Jacket
   https://www.amazon.com/ORRNIKKO-Heated-Jacket-Battery-20000mAh/dp/B0FC2HM3FB
   Image URL:
 
-- [ ] `carbon-fiber-carry-on` — Carbon Fiber Rolling Carry-On
-  https://www.amazon.com/Luggage-Spinner-Airline-Approved-Hardside-Suitcase/dp/B0DZ2CVPJ1
+- [ ] `ar-smart-glasses` — AR Smart Glasses
+  https://amazon.com/XREAL-Glasses-X-Prism-Display-Android/dp/B0GL8TMD9X
   Image URL:
 
-- [ ] `titanium-prescription-ready-sunglasses` — Titanium Frame Sunglasses, Prescription-Ready
-  https://www.amazon.com/Ding-rimless-titanium-polarized-Sunglasses/dp/B01GJHS8BU
+- [ ] `haptic-vr-vest` — Haptic Feedback VR Vest
+  https://www.amazon.com/bHaptics-TactSuit-X40-Accessories-Replacement/dp/B0CKXXTH8R
   Image URL:
 
-- [ ] `hardshell-luggage-set` — Hard-Shell Check-In Luggage Set (3-Piece)
-  https://www.amazon.com/AmazonBasics-Hardside-Spinner-Luggage-Piece/dp/B0713ZQG8K
+- [ ] `premium-vr-headset` — Premium Standalone VR Headset
+  https://www.amazon.com/Meta-Quest-512GB-Ultimate-Experiences-Included/dp/B0DDWH41HB
   Image URL:
 
-- [ ] `tailored-cashmere-overcoat` — Tailored Cashmere Overcoat
-  https://www.amazon.com/Mens-Full-Length-Overcoat-Cashmere/dp/B07D1X8V9R
+- [ ] `brain-sensing-meditation-headband` — Brain-Sensing Meditation Headband
+  https://www.amazon.com/MUSE-Headband-Meditation-Responsive-Feedback/dp/B08P8VWSPV
   Image URL:
 
-## Just For Fun
-
-- [ ] `human-size-hamster-wheel` — Human-Size Hamster Wheel
-  https://www.amazon.com/Inflatable-Activities-Families-Playtime-Diameter/dp/B097FD6XXX
+- [ ] `smart-motorcycle-hud-system` — Smart Motorcycle HUD System
+  https://www.amazon.com/MOTOEYE-Motorcycle-Bluetooth-Intercom-Reduction/dp/B0CTSZ84MS
   Image URL:
 
-- [ ] `backyard-cold-plunge-tub` — Backyard Cold Plunge Tub
-  https://www.amazon.com/PlungeFit-Cold-Plunge-Tub-Chiller/dp/B0HF7SGDKZ
+- [ ] `ai-wearable-companion` — AI Wearable Companion
+  https://www.amazon.com/EMOPET-Aibi-Pocket-Pet-Magnetically/dp/B0F1TH7D65
   Image URL:
 
-- [ ] `full-size-home-arcade-cabinet` — Full-Size Home Arcade Cabinet
-  https://www.amazon.com/Creative-Full-Size-Commercial-Machines-Woodgrain/dp/B09BXLZK1D
+## Smart Home Tech
+
+- [ ] `self-emptying-robot-vacuum` — Self-Emptying Robot Vacuum & Mop
+  https://www.amazon.com/Self-Emptying-Robotic-Hands-Free-Cleaning-Navigation/dp/B0F385CGK4
   Image URL:
 
-- [ ] `home-golf-simulator-package` — Home Golf Simulator Package
-  https://www.amazon.com/SkyTrak-Golf-Simulator-Studio-Package/dp/B0CB75B1PW
+- [ ] `gps-robotic-lawn-mower` — GPS Robotic Lawn Mower
+  https://www.amazon.com/Robot-Lawn-Mower-Wire-Intelligent/dp/B0DRCG92JQ
   Image URL:
 
-- [ ] `pro-karaoke-party-system` — Professional Karaoke Party System
-  https://www.amazon.com/Wireless-Microphones-Bluetooth-Subwoofer-Adjustment/dp/B0D86TTLGZ
+- [ ] `smart-switchable-privacy-glass` — Smart Switchable Privacy Glass Film
+  https://www.amazon.com/Piece-Inches-Eglass-Switchable-Electrochromic/dp/B00E7N5VFA
   Image URL:
 
-- [ ] `home-batting-cage-pitching-machine` — Home Batting Cage & Pitching Machine Package
-  https://www.amazon.com/Heater-Sports-Baseball-Pitching-Machine/dp/B0028SBM2M
+- [ ] `ai-smart-home-gym-mirror` — AI-Powered Smart Home Gym System
+  https://www.amazon.com/AEKE-Smart-System-Fitness-Mirror/dp/B0G3NFRM9B
   Image URL:
 
-- [ ] `foosball-air-hockey-combo-table` — Full-Size Foosball & Air Hockey Combo Table
-  https://www.amazon.com/Combo-Game-Table-Adjustable-Accessories/dp/B0DSH5XF53
+- [ ] `robotic-pool-cleaner` — Robotic Pool Cleaner
+  https://www.amazon.com/Dolphin-Premier-Robotic-Pool-Cleaner/dp/B0124QB2EU
   Image URL:
 
-- [ ] `premium-backyard-trampoline` — Premium Large Trampoline with Safety Net
-  https://www.amazon.com/Acon-Trampoline-Enclosure-Safety-Springs/dp/B00WDRY1FI
+- [ ] `robotic-window-cleaner` — Robotic Window Cleaner
+  https://www.amazon.com/Cleaning-SUNSMAI-Cleaner-Automatic-Control/dp/B0BZXJ9MW3
+  Image URL:
+
+- [ ] `whole-home-ai-security-system` — Whole-Home AI Security Camera System
+  https://www.amazon.com/xmartO-0-Light-Security-Camera-Bundle/dp/B0H4133TV6
+  Image URL:
+
+- [ ] `self-cleaning-litter-robot` — Self-Cleaning Robotic Litter Box
+  https://www.amazon.com/Litter-Robot-Step-Fence-Whisker-Black/dp/B0BH6MD3DJ
   Image URL:
