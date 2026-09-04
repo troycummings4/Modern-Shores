@@ -17,4 +17,10 @@ export interface Product {
   reviewCount: number;
   badges?: Array<"New" | "Trending" | "Staff Pick" | "Almost Gone">;
   imageSeed: string;
+  /**
+   * Real Amazon product detail page URL (no tracking tag — affiliateLink()
+   * appends it), e.g. "https://www.amazon.com/dp/B0EXAMPLE". Falls back to
+   * a generic search link when omitted.
+   */
+  affiliateUrl?: string;
 }

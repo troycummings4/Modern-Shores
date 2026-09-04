@@ -11,13 +11,16 @@ import { Product } from "../types";
  * be set for the site to work correctly out of the box.
  *
  * Using a different network instead (CJ, ShareASale, Impact, Rakuten, or a
- * retailer's own program)? Swap the URL this function returns, or give
- * each product its own `affiliateUrl` field once you have real per-product
- * tracking links.
+ * retailer's own program)? Swap the URL this function returns to that
+ * network's tracking link format.
  */
 const AFFILIATE_TAG = import.meta.env.VITE_AMAZON_ASSOCIATE_TAG || "051695-20";
 
 export function affiliateLink(product: Product): string {
+  if (product.affiliateUrl) {
+    const separator = product.affiliateUrl.includes("?") ? "&" : "?";
+    return `${product.affiliateUrl}${separator}tag=${AFFILIATE_TAG}`;
+  }
   const query = encodeURIComponent(product.name);
   return `https://www.amazon.com/s?k=${query}&tag=${AFFILIATE_TAG}`;
 }

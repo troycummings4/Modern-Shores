@@ -1,15 +1,19 @@
 import { Product } from "../types";
 
 /**
- * Demo catalog — high-ticket items only (roughly $250+). Affiliate
- * commissions are typically a small percentage of order value, so revenue
- * per sale scales with price: a 4% commission on a $900 item outearns the
- * same rate on a $20 item by 45x. Curating for average order value, not
- * just traffic, is the lever here.
+ * High-ticket catalog (roughly $250+). Affiliate commissions are typically
+ * a small percentage of order value, so revenue per sale scales with
+ * price: a 4% commission on a $900 item outearns the same rate on a $20
+ * item by 45x. Curating for average order value, not just traffic, is the
+ * lever here.
  *
- * Swap `imageSeed` for real product photography and wire up real tracking
- * links via `lib/affiliate.ts` once your affiliate accounts (Amazon
- * Associates, CJ, ShareASale, Impact, etc.) are approved.
+ * Each product's `affiliateUrl` points at a real Amazon product page
+ * (verified manually) rather than a generic search — Amazon's Associates
+ * terms expect links to specific items, and direct product links convert
+ * far better than search results. `affiliateLink()` in `lib/affiliate.ts`
+ * appends the tracking tag automatically.
+ *
+ * Swap `imageSeed` for real product photography when ready.
  */
 export const products: Product[] = [
   // Tech & Gadgets
@@ -26,6 +30,7 @@ export const products: Product[] = [
     reviewCount: 412,
     badges: ["Trending"],
     imageSeed: "camera-drone",
+    affiliateUrl: "https://www.amazon.com/DJI-Dual-Camera-Wide-Angle-Dynamic-Transmission/dp/B07FVZFX73",
   },
   {
     slug: "underwater-explorer-drone",
@@ -39,6 +44,7 @@ export const products: Product[] = [
     rating: 4.3,
     reviewCount: 96,
     imageSeed: "underwater-drone",
+    affiliateUrl: "https://www.amazon.com/Underwater-Camera-Finder-Submarine-Fishing/dp/B0CLRQW5K6",
   },
   {
     slug: "ultra-short-throw-projector",
@@ -53,6 +59,7 @@ export const products: Product[] = [
     reviewCount: 187,
     badges: ["Staff Pick"],
     imageSeed: "ust-projector",
+    affiliateUrl: "https://www.amazon.com/Hisense-Laser-PX3-PRO-Projector-Contrast/dp/B0DGHZ1C8V",
   },
   {
     slug: "racing-simulator-cockpit",
@@ -67,6 +74,7 @@ export const products: Product[] = [
     reviewCount: 143,
     badges: ["New"],
     imageSeed: "racing-cockpit",
+    affiliateUrl: "https://www.amazon.com/Adjustable-PC-Compatible-Mac-Linux-Unix/dp/B0CZ8VHKJR",
   },
   {
     slug: "self-emptying-robot-vacuum",
@@ -81,6 +89,7 @@ export const products: Product[] = [
     reviewCount: 2140,
     badges: ["Trending"],
     imageSeed: "robot-vacuum",
+    affiliateUrl: "https://www.amazon.com/Self-Emptying-Robotic-Hands-Free-Cleaning-Navigation/dp/B0F385CGK4",
   },
   {
     slug: "curved-ultrawide-gaming-monitor",
@@ -94,6 +103,7 @@ export const products: Product[] = [
     rating: 4.6,
     reviewCount: 341,
     imageSeed: "ultrawide-monitor",
+    affiliateUrl: "https://www.amazon.com/INNOCN-Ultrawide-Computer-DisplayPort-Adjustable/dp/B0D1VHBPQT",
   },
   {
     slug: "surround-sound-home-theater-system",
@@ -108,6 +118,7 @@ export const products: Product[] = [
     reviewCount: 268,
     badges: ["New"],
     imageSeed: "surround-sound",
+    affiliateUrl: "https://www.amazon.com/Fluance-Surround-Including-Floorstanding-Subwoofer/dp/B07984G7M9",
   },
   {
     slug: "professional-resin-3d-printer",
@@ -121,6 +132,7 @@ export const products: Product[] = [
     rating: 4.4,
     reviewCount: 152,
     imageSeed: "resin-3d-printer",
+    affiliateUrl: "https://www.amazon.com/ANYCUBIC-Mono-Printer-LighTurbo-Printing/dp/B0DB887MCD",
   },
 
   // Home & Living
@@ -137,6 +149,7 @@ export const products: Product[] = [
     reviewCount: 356,
     badges: ["Staff Pick"],
     imageSeed: "massage-chair",
+    affiliateUrl: "https://www.amazon.com/HealthRelife-Massage-Chair/dp/B0C1NFG2YK",
   },
   {
     slug: "personal-infrared-sauna",
@@ -151,6 +164,7 @@ export const products: Product[] = [
     reviewCount: 214,
     badges: ["Trending"],
     imageSeed: "infrared-sauna",
+    affiliateUrl: "https://www.amazon.com/iDOTODO-Portable-Personal-Control-Recliner/dp/B0CR3LXXK8",
   },
   {
     slug: "smart-adjustable-bed-frame",
@@ -164,6 +178,7 @@ export const products: Product[] = [
     rating: 4.4,
     reviewCount: 189,
     imageSeed: "smart-bed-frame",
+    affiliateUrl: "https://www.amazon.com/Renanim-Smart-Adjustable-Electric-Massage/dp/B0BQC9M8N9",
   },
   {
     slug: "designer-propane-fire-pit-table",
@@ -178,6 +193,7 @@ export const products: Product[] = [
     reviewCount: 278,
     badges: ["New"],
     imageSeed: "fire-pit-table",
+    affiliateUrl: "https://www.amazon.com/TLGREEN-Propane-Fire-Table-Round/dp/B0BMVWJSL6",
   },
   {
     slug: "floating-spiral-bookshelf",
@@ -190,6 +206,7 @@ export const products: Product[] = [
     rating: 4.5,
     reviewCount: 64,
     imageSeed: "spiral-bookshelf",
+    affiliateUrl: "https://www.amazon.com/Trailing-Spiral-Floating-Bookshelf-XL/dp/B01N0YIYF3",
   },
   {
     slug: "electric-fireplace-tv-console",
@@ -204,6 +221,7 @@ export const products: Product[] = [
     reviewCount: 412,
     badges: ["Trending"],
     imageSeed: "fireplace-console",
+    affiliateUrl: "https://www.amazon.com/LUXOAK-Fireplace-Console-Electric-Entertainment/dp/B0C9QKHHBW",
   },
   {
     slug: "standing-desk-storage",
@@ -217,6 +235,7 @@ export const products: Product[] = [
     rating: 4.5,
     reviewCount: 176,
     imageSeed: "standing-desk",
+    affiliateUrl: "https://www.amazon.com/Flexispot-Electric-Standing-Adjustable-Organizer/dp/B08SBL81LT",
   },
   {
     slug: "whole-home-water-filtration",
@@ -231,6 +250,7 @@ export const products: Product[] = [
     reviewCount: 138,
     badges: ["Staff Pick"],
     imageSeed: "water-filtration",
+    affiliateUrl: "https://www.amazon.com/Waterdrop-WHF21-PG-Filtration-Sediment-Chlorine/dp/B08XXJSN29",
   },
 
   // Kitchen & Bar
@@ -247,6 +267,7 @@ export const products: Product[] = [
     reviewCount: 1502,
     badges: ["Trending"],
     imageSeed: "nugget-ice",
+    affiliateUrl: "https://www.amazon.com/EASYERA-Countertop-Crushed-Chewble-Self-Cleaning/dp/B0C3R14HHC",
   },
   {
     slug: "dual-tap-kegerator",
@@ -260,6 +281,7 @@ export const products: Product[] = [
     rating: 4.5,
     reviewCount: 231,
     imageSeed: "kegerator",
+    affiliateUrl: "https://www.amazon.com/Kegco-Kegerator-Dual-Stainless-Steel/dp/B08CJ72986",
   },
   {
     slug: "prosumer-espresso-machine",
@@ -274,6 +296,7 @@ export const products: Product[] = [
     reviewCount: 302,
     badges: ["Staff Pick"],
     imageSeed: "espresso-machine",
+    affiliateUrl: "https://www.amazon.com/Breville-Dynamic-Espresso-Machine-Stainless/dp/B08ML986LF",
   },
   {
     slug: "outdoor-wood-fired-pizza-oven",
@@ -288,6 +311,7 @@ export const products: Product[] = [
     reviewCount: 674,
     badges: ["New"],
     imageSeed: "pizza-oven",
+    affiliateUrl: "https://www.amazon.com/PIZZELLO-Outdoor-Portable-Outside-Waterproof/dp/B09VXVV5FR",
   },
   {
     slug: "dual-zone-wine-beverage-fridge",
@@ -301,6 +325,7 @@ export const products: Product[] = [
     rating: 4.5,
     reviewCount: 198,
     imageSeed: "wine-fridge",
+    affiliateUrl: "https://www.amazon.com/NewAir-Stainless-Compressor-Removable-NWC046SS01/dp/B084Z3LZQ9",
   },
   {
     slug: "built-in-outdoor-grill-island",
@@ -315,6 +340,7 @@ export const products: Product[] = [
     reviewCount: 84,
     badges: ["Staff Pick"],
     imageSeed: "grill-island",
+    affiliateUrl: "https://www.amazon.com/Outdoor-Kitchen-Island-6-Burner-Modular/dp/B0FCG62LDZ",
   },
   {
     slug: "stand-mixer-attachment-bundle",
@@ -329,6 +355,7 @@ export const products: Product[] = [
     reviewCount: 1893,
     badges: ["Trending"],
     imageSeed: "stand-mixer",
+    affiliateUrl: "https://www.amazon.com/KitchenAid-Artisan-Grinder-Attachment-Bundle/dp/B0D413NZMM",
   },
   {
     slug: "sous-vide-vacuum-sealer-bundle",
@@ -342,6 +369,7 @@ export const products: Product[] = [
     rating: 4.5,
     reviewCount: 267,
     imageSeed: "sous-vide-bundle",
+    affiliateUrl: "https://www.amazon.com/Anova-Culinary-Precision-Cooker-Storage/dp/B09L4Z1D3G",
   },
 
   // Outdoor & Adventure
@@ -358,6 +386,7 @@ export const products: Product[] = [
     reviewCount: 233,
     badges: ["Trending"],
     imageSeed: "electric-skateboard",
+    affiliateUrl: "https://www.amazon.com/Hurricane-Off-Road-Skateboard-Ultra-Long-Professional/dp/B0BW3G3B4Y",
   },
   {
     slug: "full-suspension-electric-mountain-bike",
@@ -372,6 +401,7 @@ export const products: Product[] = [
     reviewCount: 118,
     badges: ["Staff Pick"],
     imageSeed: "electric-mountain-bike",
+    affiliateUrl: "https://www.amazon.com/Electric-with750W-Suspension-Mountain-Professional/dp/B0B48P17GF",
   },
   {
     slug: "premium-tandem-touring-kayak",
@@ -385,6 +415,7 @@ export const products: Product[] = [
     rating: 4.6,
     reviewCount: 447,
     imageSeed: "tandem-kayak",
+    affiliateUrl: "https://www.amazon.com/Danrelax-Inflatable-Drop-Stitch-Lightweight-Recreational/dp/B0FWRGHBWR",
   },
   {
     slug: "hard-shell-rooftop-tent",
@@ -399,6 +430,7 @@ export const products: Product[] = [
     reviewCount: 89,
     badges: ["New"],
     imageSeed: "rooftop-tent",
+    affiliateUrl: "https://www.amazon.com/GEERTOP-Hard-Shell-Rooftop-Camping/dp/B0DCNYTR91",
   },
   {
     slug: "portable-power-station-solar",
@@ -412,6 +444,7 @@ export const products: Product[] = [
     rating: 4.8,
     reviewCount: 276,
     imageSeed: "solar-generator",
+    affiliateUrl: "https://www.amazon.com/Jackery-Generator-Portable-Charging-Emergencies/dp/B0DG8NXM21",
   },
   {
     slug: "gps-robotic-lawn-mower",
@@ -426,6 +459,7 @@ export const products: Product[] = [
     reviewCount: 312,
     badges: ["Trending"],
     imageSeed: "robotic-mower",
+    affiliateUrl: "https://www.amazon.com/Robot-Lawn-Mower-Wire-Intelligent/dp/B0DRCG92JQ",
   },
   {
     slug: "premium-inflatable-paddleboard-package",
@@ -439,6 +473,7 @@ export const products: Product[] = [
     rating: 4.6,
     reviewCount: 389,
     imageSeed: "paddleboard",
+    affiliateUrl: "https://www.amazon.com/Buoy-Watersports-Inflatable-Touring-Paddleboard/dp/B0CZC4JCTM",
   },
   {
     slug: "cargo-roof-box-rack-system",
@@ -452,6 +487,7 @@ export const products: Product[] = [
     rating: 4.5,
     reviewCount: 201,
     imageSeed: "cargo-roof-box",
+    affiliateUrl: "https://www.amazon.com/VEVOR-Dual-Sided-Reinforced-Aerodynamic-Suitable/dp/B0DFPJQG58",
   },
 
   // Style & Carry
@@ -468,6 +504,7 @@ export const products: Product[] = [
     reviewCount: 967,
     badges: ["Trending"],
     imageSeed: "smart-ring",
+    affiliateUrl: "https://www.amazon.com/ULTRAHUMAN-AIR-Smart-Tracker-Fitness-Titanium/dp/B0D9B9513X",
   },
   {
     slug: "automatic-heritage-watch",
@@ -482,6 +519,7 @@ export const products: Product[] = [
     reviewCount: 204,
     badges: ["Staff Pick"],
     imageSeed: "automatic-watch",
+    affiliateUrl: "https://www.amazon.com/Automatic-Movement-Sapphire-Crystal-Italian/dp/B081HYZY5Q",
   },
   {
     slug: "full-grain-leather-weekender",
@@ -494,6 +532,7 @@ export const products: Product[] = [
     rating: 4.6,
     reviewCount: 312,
     imageSeed: "leather-weekender",
+    affiliateUrl: "https://www.amazon.com/Polare-Genuine-Leather-Weekender-luggage/dp/B078B91TNT",
   },
   {
     slug: "heated-smart-jacket",
@@ -508,6 +547,7 @@ export const products: Product[] = [
     reviewCount: 205,
     badges: ["New"],
     imageSeed: "heated-jacket",
+    affiliateUrl: "https://www.amazon.com/ORRNIKKO-Heated-Jacket-Battery-20000mAh/dp/B0FC2HM3FB",
   },
   {
     slug: "carbon-fiber-carry-on",
@@ -521,6 +561,7 @@ export const products: Product[] = [
     rating: 4.5,
     reviewCount: 176,
     imageSeed: "carbon-luggage",
+    affiliateUrl: "https://www.amazon.com/Luggage-Spinner-Airline-Approved-Hardside-Suitcase/dp/B0DZ2CVPJ1",
   },
   {
     slug: "titanium-prescription-ready-sunglasses",
@@ -534,6 +575,7 @@ export const products: Product[] = [
     rating: 4.6,
     reviewCount: 288,
     imageSeed: "titanium-sunglasses",
+    affiliateUrl: "https://www.amazon.com/Ding-rimless-titanium-polarized-Sunglasses/dp/B01GJHS8BU",
   },
   {
     slug: "hardshell-luggage-set",
@@ -548,6 +590,7 @@ export const products: Product[] = [
     reviewCount: 421,
     badges: ["New"],
     imageSeed: "luggage-set",
+    affiliateUrl: "https://www.amazon.com/AmazonBasics-Hardside-Spinner-Luggage-Piece/dp/B0713ZQG8K",
   },
   {
     slug: "tailored-cashmere-overcoat",
@@ -562,6 +605,7 @@ export const products: Product[] = [
     reviewCount: 96,
     badges: ["Staff Pick"],
     imageSeed: "cashmere-overcoat",
+    affiliateUrl: "https://www.amazon.com/Mens-Full-Length-Overcoat-Cashmere/dp/B07D1X8V9R",
   },
 
   // Just For Fun
@@ -578,6 +622,7 @@ export const products: Product[] = [
     reviewCount: 62,
     badges: ["Almost Gone"],
     imageSeed: "hamster-wheel",
+    affiliateUrl: "https://www.amazon.com/Inflatable-Activities-Families-Playtime-Diameter/dp/B097FD6XXX",
   },
   {
     slug: "backyard-cold-plunge-tub",
@@ -592,6 +637,7 @@ export const products: Product[] = [
     reviewCount: 143,
     badges: ["Trending"],
     imageSeed: "cold-plunge",
+    affiliateUrl: "https://www.amazon.com/PlungeFit-Cold-Plunge-Tub-Chiller/dp/B0HF7SGDKZ",
   },
   {
     slug: "full-size-home-arcade-cabinet",
@@ -606,6 +652,7 @@ export const products: Product[] = [
     reviewCount: 221,
     badges: ["Staff Pick"],
     imageSeed: "arcade-cabinet",
+    affiliateUrl: "https://www.amazon.com/Creative-Full-Size-Commercial-Machines-Woodgrain/dp/B09BXLZK1D",
   },
   {
     slug: "home-golf-simulator-package",
@@ -619,6 +666,7 @@ export const products: Product[] = [
     rating: 4.5,
     reviewCount: 97,
     imageSeed: "golf-simulator",
+    affiliateUrl: "https://www.amazon.com/SkyTrak-Golf-Simulator-Studio-Package/dp/B0CB75B1PW",
   },
   {
     slug: "pro-karaoke-party-system",
@@ -633,6 +681,7 @@ export const products: Product[] = [
     reviewCount: 316,
     badges: ["New"],
     imageSeed: "karaoke-system",
+    affiliateUrl: "https://www.amazon.com/Wireless-Microphones-Bluetooth-Subwoofer-Adjustment/dp/B0D86TTLGZ",
   },
   {
     slug: "home-batting-cage-pitching-machine",
@@ -646,6 +695,7 @@ export const products: Product[] = [
     rating: 4.5,
     reviewCount: 78,
     imageSeed: "batting-cage",
+    affiliateUrl: "https://www.amazon.com/Heater-Sports-Baseball-Pitching-Machine/dp/B0028SBM2M",
   },
   {
     slug: "foosball-air-hockey-combo-table",
@@ -660,6 +710,7 @@ export const products: Product[] = [
     reviewCount: 194,
     badges: ["Trending"],
     imageSeed: "foosball-table",
+    affiliateUrl: "https://www.amazon.com/Combo-Game-Table-Adjustable-Accessories/dp/B0DSH5XF53",
   },
   {
     slug: "premium-backyard-trampoline",
@@ -673,6 +724,7 @@ export const products: Product[] = [
     rating: 4.4,
     reviewCount: 502,
     imageSeed: "backyard-trampoline",
+    affiliateUrl: "https://www.amazon.com/Acon-Trampoline-Enclosure-Safety-Springs/dp/B00WDRY1FI",
   },
 ];
 

@@ -51,16 +51,19 @@ Need to swap the tag later (a second account, a campaign-specific ID)?
 Copy `.env.example` to `.env` and set `VITE_AMAZON_ASSOCIATE_TAG` — it
 overrides the default without touching code.
 
-Amazon's cookie attributes *any* purchase in that browsing session to you,
-not just the exact item clicked — so even the generic search-result links
-this site uses by default earn commission on whatever the visitor buys.
+Every product's `affiliateUrl` in `src/data/products.ts` points at a real,
+verified Amazon product page (not a generic search) — Amazon's Associates
+terms expect links to specific items, and direct product links convert far
+better than search results. Amazon's cookie also attributes *any* purchase
+in that browsing session to you, not just the exact item clicked, so these
+links earn commission on whatever the visitor ends up buying.
 
 **Want higher commission rates or a different network** (CJ, ShareASale,
 Impact, Rakuten, or a retailer's own affiliate program — often 8–20% vs.
-Amazon's ~1–4%)? Give each product in `src/data/products.ts` its own
-`affiliateUrl` field with the real tracking link from that network, and
-update `affiliateLink()` in `src/lib/affiliate.ts` to return it (falling
-back to the Amazon link for anything without one).
+Amazon's ~1–4%)? Update the relevant product's `affiliateUrl` in
+`src/data/products.ts` to that network's tracking link, and adjust
+`affiliateLink()` in `src/lib/affiliate.ts` if the URL format needs
+different handling than Amazon's.
 
 ### 2. Swap in real product photography
 
