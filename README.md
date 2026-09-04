@@ -84,17 +84,52 @@ The newsletter signup (`src/components/Newsletter.tsx`) and contact form
 provider (Mailchimp, Klaviyo, ConvertKit) and a form backend (Formspree,
 Resend, a serverless function) respectively.
 
-## Deploying
+## Deploying (going live)
 
-This is a static site — build it and host it anywhere:
+The code is deploy-ready as-is — routing, SPA rewrites, and build config
+are already set up for the two easiest hosts. The one step nobody else can
+do for you is connecting your own account to a host, since that requires
+your login. Everything else is done.
 
-```bash
-npm run build
-```
+### Option A — Vercel (recommended: fastest, free, custom domains)
 
-Deploy the `dist/` folder to Vercel, Netlify, Cloudflare Pages, GitHub
-Pages, or any static host. On Vercel/Netlify, just point them at this repo
-with build command `npm run build` and output directory `dist`.
+1. Push this repo to GitHub if it isn't already (it is, on this branch).
+2. Go to [vercel.com](https://vercel.com) → sign up/log in with GitHub →
+   **Add New Project** → select this repo.
+3. Vercel auto-detects Vite. Leave the defaults (build command
+   `npm run build`, output directory `dist`) and click **Deploy**.
+4. Done — you get a live `*.vercel.app` URL in about a minute. Add a real
+   domain later under Project Settings → Domains.
+
+`vercel.json` in this repo already handles the SPA rewrite so deep links
+like `/product/...` and page refreshes work correctly.
+
+### Option B — Netlify
+
+1. Go to [netlify.com](https://netlify.com) → sign up/log in with GitHub →
+   **Add new site** → **Import an existing project** → select this repo.
+2. Build command `npm run build`, publish directory `dist` (Netlify
+   usually detects both automatically). Click **Deploy**.
+3. Live at a `*.netlify.app` URL immediately; add a custom domain under
+   Site configuration → Domain management.
+
+`public/_redirects` already handles the SPA rewrite for Netlify.
+
+### Option C — GitHub Pages (no third-party account at all)
+
+A workflow (`.github/workflows/deploy-gh-pages.yml`) is already set up to
+build and deploy automatically on every push to `main`. It only needs one
+manual, one-time toggle that only a repo admin can make: go to this repo's
+**Settings → Pages → Build and deployment → Source**, and select
+**"GitHub Actions."** After that, every push to `main` deploys
+automatically to `https://<your-username>.github.io/Modern-Shores/`.
+
+### Custom domain
+
+All three options support attaching your own domain (e.g.
+`modernshores.com`) for free once deployed — you'd buy the domain
+separately from a registrar (Namecheap, Google Domains successor Squarespace,
+Cloudflare, etc.) and point it at whichever host you chose.
 
 ## Legal note
 
