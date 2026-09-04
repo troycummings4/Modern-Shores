@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Product } from "../types";
 import { formatPrice, percentOff } from "../lib/format";
-import { affiliateLink, productImage } from "../lib/affiliate";
+import { affiliateLink, productPhoto } from "../lib/affiliate";
 import Badge from "./Badge";
 import StarRating from "./StarRating";
 
@@ -15,7 +15,7 @@ export default function ProductCard({ product }: { product: Product }) {
         className="relative block aspect-square overflow-hidden bg-shore-sand"
       >
         <img
-          src={productImage(product.imageSeed)}
+          src={productPhoto(product)}
           alt={product.name}
           loading="lazy"
           className="h-full w-full object-cover transition duration-500 group-hover:scale-105"

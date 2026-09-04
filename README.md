@@ -68,11 +68,17 @@ different handling than Amazon's.
 ### 2. Swap in real product photography
 
 Product images currently come from `picsum.photos` (placeholder photos,
-keyed by `imageSeed` in `src/data/products.ts`) so the site is fully
-populated out of the box. Replace `productImage()` in
-`src/lib/affiliate.ts` to point at your own image URLs (host them
-yourself, or use the merchant's product images where their terms allow),
-or add an `image` field to each product.
+keyed by `imageSeed`) so the site is fully populated out of the box. To
+show each product's real Amazon photo instead, set that product's
+`image` field in `src/data/products.ts` — `productPhoto()` in
+`src/lib/affiliate.ts` uses it automatically when present, falling back
+to the placeholder otherwise. No other code changes needed.
+
+Get the image URLs via **Amazon SiteStripe** (the official tool for
+approved Associates — never scrape/hotlink from the page's HTML directly,
+that's against Amazon's terms). `docs/product-images-checklist.md` has
+the direct link to every product's listing and a place to record each
+image URL as you go.
 
 ### 3. Edit the catalog
 

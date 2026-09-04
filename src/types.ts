@@ -23,4 +23,10 @@ export interface Product {
    * a generic search link when omitted.
    */
   affiliateUrl?: string;
+  /**
+   * Real product photo URL, sourced via Amazon SiteStripe (or your own
+   * photography) — never scraped. Falls back to the placeholder generated
+   * from `imageSeed` when omitted.
+   */
+  image?: string;
 }

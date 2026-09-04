@@ -2,7 +2,7 @@ import { Link, Navigate, useParams } from "react-router-dom";
 import { getProduct, getRelatedProducts } from "../data/products";
 import { getCategory } from "../data/categories";
 import { formatPrice, percentOff } from "../lib/format";
-import { affiliateLink, productImage } from "../lib/affiliate";
+import { affiliateLink, productPhoto } from "../lib/affiliate";
 import Badge from "../components/Badge";
 import StarRating from "../components/StarRating";
 import ProductGrid from "../components/ProductGrid";
@@ -39,7 +39,7 @@ export default function Product() {
       <div className="grid gap-10 lg:grid-cols-2">
         <div className="relative overflow-hidden rounded-3xl bg-shore-sand shadow-card">
           <img
-            src={productImage(product.imageSeed, 900, 900)}
+            src={productPhoto(product, 900, 900)}
             alt={product.name}
             className="aspect-square w-full object-cover"
           />

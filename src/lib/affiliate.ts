@@ -28,3 +28,12 @@ export function affiliateLink(product: Product): string {
 export function productImage(seed: string, width = 640, height = 640): string {
   return `https://picsum.photos/seed/${encodeURIComponent(seed)}/${width}/${height}`;
 }
+
+/**
+ * Real product photo when set (product.image, sourced via Amazon
+ * SiteStripe or your own photography — never scraped), otherwise the
+ * generated placeholder keyed off imageSeed.
+ */
+export function productPhoto(product: Product, width = 640, height = 640): string {
+  return product.image || productImage(product.imageSeed, width, height);
+}
