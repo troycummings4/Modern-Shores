@@ -42,7 +42,7 @@ blank just keeps the current placeholder image.
   Image URL:
 
 - [ ] `full-size-home-arcade-cabinet` — Full-Size Home Arcade Cabinet
-  https://www.amazon.com/Creative-Full-Size-Commercial-Machines-Woodgrain/dp/B09BXLZK1D
+  https://www.amazon.com/Creative-Full-Size-Commercial-Machines-Trackball/dp/B0BB6C7YGZ
   Image URL:
 
 - [ ] `curved-ultrawide-gaming-monitor` — 49-Inch Curved Ultrawide Gaming Monitor
@@ -61,8 +61,8 @@ blank just keeps the current placeholder image.
   https://www.amazon.com/CORE-Omnidirectional-Compatible-Game-Tuned-Enthusiasts/dp/B0DGGCBLM1
   Image URL:
 
-- [ ] `high-performance-gaming-pc` — High-Performance Gaming PC (RTX 4070 Super)
-  https://www.amazon.com/Skytech-Azure-Gaming-14700F-GDDR6X/dp/B0CSJF4J5G
+- [ ] `high-performance-gaming-pc` — High-Performance Gaming PC (RTX 4070 Ti)
+  https://www.amazon.com/YEYIAN-Gaming-PC-ODACHI-Computer/dp/B0C4BGHG1T
   Image URL:
 
 - [ ] `haptic-feedback-gaming-pad` — Haptic Feedback Gaming Pad
@@ -72,7 +72,7 @@ blank just keeps the current placeholder image.
 ## Drones & Robotics
 
 - [ ] `pro-4k-camera-drone` — Professional 4K Camera Drone
-  https://www.amazon.com/DJI-Dual-Camera-Wide-Angle-Dynamic-Transmission/dp/B07FVZFX73
+  https://www.amazon.com/DJI-Dual-Camera-Wide-Angle-Transmission-Accessory/dp/B0DRWGHPKQ
   Image URL:
 
 - [ ] `underwater-explorer-drone` — Underwater Explorer Drone
@@ -80,7 +80,7 @@ blank just keeps the current placeholder image.
   Image URL:
 
 - [ ] `fpv-racing-drone-combo` — FPV Racing Drone Combo with Goggles
-  https://www.amazon.com/DJI-Remote-Controller-Goggles-CP-FP-00000001-01/dp/B08Z3D2WB4
+  https://www.amazon.com/DJI-Batteries-One-Push-Acrobatics-Propeller/dp/B0D1GWN7YS
   Image URL:
 
 - [ ] `robot-dog-companion` — Quadruped Robot Dog
@@ -96,7 +96,7 @@ blank just keeps the current placeholder image.
   Image URL:
 
 - [ ] `home-patrol-robot` — AI Home Patrol Robot
-  https://www.amazon.com/Introducing-Amazon-Astro/dp/B078NSDFSB
+  https://www.amazon.com/Enabot-EBO-Max-Robot-Camera/dp/B0GXZ7YZHV
   Image URL:
 
 - [ ] `humanoid-boxing-robot` — Humanoid Boxing & Dancing Robot
@@ -198,7 +198,7 @@ blank just keeps the current placeholder image.
   Image URL:
 
 - [ ] `smart-motorcycle-hud-system` — Smart Motorcycle HUD System
-  https://www.amazon.com/MOTOEYE-Motorcycle-Bluetooth-Intercom-Reduction/dp/B0CTSZ84MS
+  https://www.amazon.com/MOTOEYE-E6-Motorcycle-Bluetooth-Reduction/dp/B0F6714SWS
   Image URL:
 
 - [ ] `ai-wearable-companion` — AI Wearable Companion
@@ -208,19 +208,19 @@ blank just keeps the current placeholder image.
 ## Smart Home Tech
 
 - [ ] `self-emptying-robot-vacuum` — Self-Emptying Robot Vacuum & Mop
-  https://www.amazon.com/Self-Emptying-Robotic-Hands-Free-Cleaning-Navigation/dp/B0F385CGK4
+  https://www.amazon.com/roborock-Max-Robot-Vacuum-Self-Emptying/dp/B0CR35M9VM
   Image URL:
 
 - [ ] `gps-robotic-lawn-mower` — GPS Robotic Lawn Mower
-  https://www.amazon.com/Robot-Lawn-Mower-Wire-Intelligent/dp/B0DRCG92JQ
+  https://www.amazon.com/Segway-Navimow-Robot-Lawn-Mower/dp/B0G8173C6Y
   Image URL:
 
 - [ ] `smart-switchable-privacy-glass` — Smart Switchable Privacy Glass Film
-  https://www.amazon.com/Piece-Inches-Eglass-Switchable-Electrochromic/dp/B00E7N5VFA
+  https://www.amazon.com/Switchable-Privacy-Electric-Partitions-Projection/dp/B0G19JRLG6
   Image URL:
 
 - [ ] `ai-smart-home-gym-mirror` — AI-Powered Smart Home Gym System
-  https://www.amazon.com/AEKE-Smart-System-Fitness-Mirror/dp/B0G3NFRM9B
+  https://www.amazon.com/AEKE-Smart-System-Fitness-Mirror/dp/B0FR4RYB1B
   Image URL:
 
 - [ ] `robotic-pool-cleaner` — Robotic Pool Cleaner

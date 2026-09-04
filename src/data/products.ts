@@ -38,9 +38,9 @@ export const products: Product[] = [
   {
     slug: "full-size-home-arcade-cabinet",
     name: "Full-Size Home Arcade Cabinet",
-    tagline: "3,000 games, one glowing marquee.",
+    tagline: "5,000+ games, one glowing marquee.",
     description:
-      "A full-height, full-width arcade cabinet with an authentic clicky joystick, a 3,000-game library, and a lit-up marquee sign. Basically a standing invitation to your own game room.",
+      "A full-height, full-width arcade cabinet with authentic Sanwa joysticks, a trackball, a 5,000+ game library, and stools included. Basically a standing invitation to your own game room.",
     category: "sim-and-gaming",
     price: 1099.0,
     compareAtPrice: 1349.0,
@@ -48,7 +48,7 @@ export const products: Product[] = [
     reviewCount: 221,
     badges: ["Staff Pick"],
     imageSeed: "arcade-cabinet",
-    affiliateUrl: "https://www.amazon.com/Creative-Full-Size-Commercial-Machines-Woodgrain/dp/B09BXLZK1D",
+    affiliateUrl: "https://www.amazon.com/Creative-Full-Size-Commercial-Machines-Trackball/dp/B0BB6C7YGZ",
   },
   {
     slug: "curved-ultrawide-gaming-monitor",
@@ -110,10 +110,10 @@ export const products: Product[] = [
   },
   {
     slug: "high-performance-gaming-pc",
-    name: "High-Performance Gaming PC (RTX 4070 Super)",
+    name: "High-Performance Gaming PC (RTX 4070 Ti)",
     tagline: "Every setting maxed, every frame counted.",
     description:
-      "A prebuilt tower with an RTX 4070 Super, 32GB DDR5, and a 1TB Gen4 SSD — the kind of specs that make ray tracing an afterthought instead of a compromise.",
+      "A prebuilt tower with an Intel Core i9, an RTX 4070 Ti, 32GB DDR5, and a 1TB Gen4 SSD — the kind of specs that make ray tracing an afterthought instead of a compromise.",
     category: "sim-and-gaming",
     price: 1799.0,
     compareAtPrice: 2199.0,
@@ -121,7 +121,7 @@ export const products: Product[] = [
     reviewCount: 512,
     badges: ["Trending"],
     imageSeed: "gaming-pc",
-    affiliateUrl: "https://www.amazon.com/Skytech-Azure-Gaming-14700F-GDDR6X/dp/B0CSJF4J5G",
+    affiliateUrl: "https://www.amazon.com/YEYIAN-Gaming-PC-ODACHI-Computer/dp/B0C4BGHG1T",
   },
   {
     slug: "haptic-feedback-gaming-pad",
@@ -152,7 +152,7 @@ export const products: Product[] = [
     reviewCount: 412,
     badges: ["Trending"],
     imageSeed: "camera-drone",
-    affiliateUrl: "https://www.amazon.com/DJI-Dual-Camera-Wide-Angle-Dynamic-Transmission/dp/B07FVZFX73",
+    affiliateUrl: "https://www.amazon.com/DJI-Dual-Camera-Wide-Angle-Transmission-Accessory/dp/B0DRWGHPKQ",
   },
   {
     slug: "underwater-explorer-drone",
@@ -173,7 +173,7 @@ export const products: Product[] = [
     name: "FPV Racing Drone Combo with Goggles",
     tagline: "You're not flying it. You're wearing it.",
     description:
-      "A first-person-view racing drone bundled with immersive FPV goggles and a full remote — strap in and fly through gaps at speeds that make regular drone footage look like a slideshow.",
+      "A cinewhoop FPV drone bundled with immersive Goggles 3 and a motion controller — one-push acrobatic flips and rolls, strapped-in first-person flight at speeds that make regular drone footage look like a slideshow.",
     category: "drones-and-robotics",
     price: 899.0,
     compareAtPrice: 1099.0,
@@ -181,7 +181,7 @@ export const products: Product[] = [
     reviewCount: 234,
     badges: ["New"],
     imageSeed: "fpv-drone-goggles",
-    affiliateUrl: "https://www.amazon.com/DJI-Remote-Controller-Goggles-CP-FP-00000001-01/dp/B08Z3D2WB4",
+    affiliateUrl: "https://www.amazon.com/DJI-Batteries-One-Push-Acrobatics-Propeller/dp/B0D1GWN7YS",
   },
   {
     slug: "robot-dog-companion",
@@ -232,14 +232,14 @@ export const products: Product[] = [
     name: "AI Home Patrol Robot",
     tagline: "It rolls around the house so you don't have to check twice.",
     description:
-      "A mobile household robot that maps your home, patrols on command, and checks in on specific rooms with a periscoping camera — proactive home monitoring instead of a wall of static feeds.",
+      "A self-driving 4K camera on wheels that maps your whole home, patrols on a schedule, and auto-recharges when it's done — proactive room-by-room monitoring instead of a wall of static camera feeds.",
     category: "drones-and-robotics",
     price: 1599.0,
     compareAtPrice: 1999.0,
     rating: 4.2,
     reviewCount: 203,
     imageSeed: "patrol-robot",
-    affiliateUrl: "https://www.amazon.com/Introducing-Amazon-Astro/dp/B078NSDFSB",
+    affiliateUrl: "https://www.amazon.com/Enabot-EBO-Max-Robot-Camera/dp/B0GXZ7YZHV",
   },
   {
     slug: "humanoid-boxing-robot",
@@ -595,7 +595,7 @@ export const products: Product[] = [
     rating: 4.3,
     reviewCount: 142,
     imageSeed: "moto-hud",
-    affiliateUrl: "https://www.amazon.com/MOTOEYE-Motorcycle-Bluetooth-Intercom-Reduction/dp/B0CTSZ84MS",
+    affiliateUrl: "https://www.amazon.com/MOTOEYE-E6-Motorcycle-Bluetooth-Reduction/dp/B0F6714SWS",
   },
   {
     slug: "ai-wearable-companion",
@@ -616,9 +616,9 @@ export const products: Product[] = [
   {
     slug: "self-emptying-robot-vacuum",
     name: "Self-Emptying Robot Vacuum & Mop",
-    tagline: "Two months between you and the dustbin.",
+    tagline: "Seven weeks between you and the dustbin.",
     description:
-      "LiDAR mapping, auto mop-lifting on carpet, and a self-emptying base that holds 60 days of debris. This is the vacuum you stop thinking about entirely.",
+      "LiDAR mapping, auto mop-lifting on carpet, and a self-emptying dock that holds up to seven weeks of debris. This is the vacuum you stop thinking about entirely.",
     category: "smart-home-tech",
     price: 599.0,
     compareAtPrice: 749.0,
@@ -626,7 +626,7 @@ export const products: Product[] = [
     reviewCount: 2140,
     badges: ["Trending"],
     imageSeed: "robot-vacuum",
-    affiliateUrl: "https://www.amazon.com/Self-Emptying-Robotic-Hands-Free-Cleaning-Navigation/dp/B0F385CGK4",
+    affiliateUrl: "https://www.amazon.com/roborock-Max-Robot-Vacuum-Self-Emptying/dp/B0CR35M9VM",
   },
   {
     slug: "gps-robotic-lawn-mower",
@@ -641,7 +641,7 @@ export const products: Product[] = [
     reviewCount: 312,
     badges: ["Staff Pick"],
     imageSeed: "robotic-mower",
-    affiliateUrl: "https://www.amazon.com/Robot-Lawn-Mower-Wire-Intelligent/dp/B0DRCG92JQ",
+    affiliateUrl: "https://www.amazon.com/Segway-Navimow-Robot-Lawn-Mower/dp/B0G8173C6Y",
   },
   {
     slug: "smart-switchable-privacy-glass",
@@ -655,7 +655,7 @@ export const products: Product[] = [
     rating: 4.2,
     reviewCount: 76,
     imageSeed: "smart-glass",
-    affiliateUrl: "https://www.amazon.com/Piece-Inches-Eglass-Switchable-Electrochromic/dp/B00E7N5VFA",
+    affiliateUrl: "https://www.amazon.com/Switchable-Privacy-Electric-Partitions-Projection/dp/B0G19JRLG6",
   },
   {
     slug: "ai-smart-home-gym-mirror",
@@ -670,7 +670,7 @@ export const products: Product[] = [
     reviewCount: 89,
     badges: ["New"],
     imageSeed: "smart-gym-mirror",
-    affiliateUrl: "https://www.amazon.com/AEKE-Smart-System-Fitness-Mirror/dp/B0G3NFRM9B",
+    affiliateUrl: "https://www.amazon.com/AEKE-Smart-System-Fitness-Mirror/dp/B0FR4RYB1B",
   },
   {
     slug: "robotic-pool-cleaner",
