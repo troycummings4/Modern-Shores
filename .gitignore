@@ -6,3 +6,14 @@ dist-ssr
 .env
 .env.local
 *.tsbuildinfo
+
+# Runtime-generated data for the business demo apps (businesses/*) —
+# each JsonStore creates these on first server start; only the seed
+# files (products.json, articles.json, providers.json) are tracked.
+businesses/*/data/orders.json
+businesses/*/data/bookings.json
+businesses/*/data/subscribers.json
+businesses/*/data/users.json
+businesses/*/data/sessions.json
+businesses/*/data/clients.json
+businesses/*/data/invoices.json
