@@ -28,7 +28,7 @@ export default function Home() {
           eyebrow="Hot right now"
           title="Trending this week"
           subtitle="The products everyone's tagging their friends in."
-          cta={{ label: "See all deals", to: "/category/drones-and-robotics" }}
+          cta={{ label: "See all deals", to: "/category/tech-and-gadgets" }}
         />
         <div className="mt-8">
           <ProductGrid products={trending} />

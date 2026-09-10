@@ -51,7 +51,7 @@ export default function Navbar() {
 
         <div className="hidden items-center gap-3 lg:flex">
           <Link
-            to="/category/electric-rides"
+            to="/category/tech-and-gadgets"
             className="rounded-full bg-shore-coral px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-shore-coral/90"
           >
             Today's Deals

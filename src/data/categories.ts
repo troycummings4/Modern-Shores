@@ -2,40 +2,16 @@ import { Category } from "../types";
 
 export const categories: Category[] = [
   {
-    slug: "sim-and-gaming",
-    name: "Sim & Gaming Rigs",
-    tagline: "Cockpits, not controllers",
-    emoji: "🏎️",
-  },
-  {
-    slug: "drones-and-robotics",
-    name: "Drones & Robotics",
-    tagline: "It flies, walks, or thinks for itself",
+    slug: "tech-and-gadgets",
+    name: "Tech & Gadgets",
+    tagline: "The kind of gear that needs a demo, not a description",
     emoji: "🤖",
   },
   {
-    slug: "electric-rides",
-    name: "Electric Rides",
-    tagline: "Absurd top speeds, zero gas",
-    emoji: "⚡",
-  },
-  {
-    slug: "home-theater-audio",
-    name: "Home Theater & Audio",
-    tagline: "Overkill, by design",
-    emoji: "🎬",
-  },
-  {
-    slug: "wearable-tech",
-    name: "Wearable Tech",
-    tagline: "The future, worn casually",
-    emoji: "🕶️",
-  },
-  {
-    slug: "smart-home-tech",
-    name: "Smart Home Tech",
-    tagline: "Your house, upgraded",
-    emoji: "🏠",
+    slug: "lifestyle-and-leisure",
+    name: "Lifestyle & Leisure",
+    tagline: "Everyday luxury, upgraded",
+    emoji: "✨",
   },
 ];
 

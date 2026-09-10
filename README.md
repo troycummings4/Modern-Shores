@@ -1,12 +1,13 @@
 # Modern Shores
 
-A modern, Touch of Modern–inspired affiliate shopping site for curated,
-high-ticket, genuinely wacky tech — robot dogs, racing sim cockpits,
-e-foils, AR glasses, humanoid robots. The catalog is intentionally
-premium-and-tech-only — affiliate commissions are a percentage of order
-value, so a higher average order value means meaningfully more revenue per
-sale at the same traffic and the same commission rate, and tech is what
-this kind of "wait, that's real?" content earns/shares best around.
+A modern, Touch of Modern–inspired affiliate shopping site for a small,
+hand-curated lineup of high-ticket finds — a robot dog, an F1-style racing
+cockpit, a laser home theater projector, reference-grade audio, and a
+couple of everyday-luxury picks. The catalog is intentionally small: every
+product's link was personally verified by the site owner before being
+added, rather than sourced in bulk. Affiliate commissions are a percentage
+of order value, so a higher average order value means meaningfully more
+revenue per sale at the same traffic and the same commission rate.
 
 Built with React + TypeScript + Vite + Tailwind CSS.
 
@@ -20,7 +21,7 @@ Built with React + TypeScript + Vite + Tailwind CSS.
 - **About, Contact, and Affiliate Disclosure pages** (FTC-compliant
   disclosure required for any affiliate site)
 - Fully responsive, mobile-first layout
-- 48 demo products (all $250+, 8 per category) across 6 categories in
+- 6 hand-picked products (all $250+) across 2 categories in
   `src/data/products.ts`, each already linking through the live Amazon
   Associates tag
 
