@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Cart &mdash; Driftwood Supply Co.</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <main>
+    <h1>Your Cart</h1>
+    <div id="cart-content">Loading&hellip;</div>
+  </main>
+
+  <script src="/app.js"></script>
+  <script>
+    async function load() {
+      const cart = getCart();
+      const container = document.getElementById('cart-content');
+      if (cart.length === 0) {
+        container.innerHTML = '<div class="empty-state"><h2>Your cart is empty</h2><a class="btn primary" href="/">Continue shopping</a></div>';
+        return;
+      }
+      const res = await fetch('/api/products');
+      const products = await res.json();
+      const rows = cart.map((item) => {
+        const p = products.find((x) => x.id === item.productId);
+        if (!p) return null;
+        return { ...item, product: p, lineTotal: p.price * item.quantity };
+      }).filter(Boolean);
+
+      const subtotal = rows.reduce((s, r) => s + r.lineTotal, 0);
+
+      container.innerHTML = `
+        <table class="cart-table">
+          <thead><tr><th>Product</th><th>Price</th><th>Qty</th><th>Total</th><th></th></tr></thead>
+          <tbody>
+            ${rows.map((r) => `
+              <tr>
+                <td><img src="${r.product.image}" alt="" /> ${r.product.name}</td>
+                <td>${money(r.product.price)}</td>
+                <td>${r.quantity}</td>
+                <td>${money(r.lineTotal)}</td>
+                <td><span class="remove-link" data-id="${r.productId}">Remove</span></td>
+              </tr>
+            `).join('')}
+          </tbody>
+        </table>
+        <div class="summary">
+          <div class="summary-row"><span>Subtotal</span><span>${money(subtotal)}</span></div>
+          <div class="summary-row"><span>Shipping</span><span>${subtotal >= 150 ? 'Free' : money(12)}</span></div>
+          <a class="btn primary" href="/checkout.html" style="width:100%; text-align:center; margin-top:1rem;">Checkout</a>
+        </div>
+      `;
+
+      container.querySelectorAll('.remove-link').forEach((el) => {
+        el.addEventListener('click', () => {
+          removeFromCart(el.dataset.id);
+          load();
+        });
+      });
+    }
+
+    load();
+  </script>
+</body>
+</html>

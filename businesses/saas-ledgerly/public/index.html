@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ledgerly &mdash; Invoicing for Freelancers</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="site">
+    <a class="logo" href="/">Ledgerly</a>
+    <nav>
+      <a href="/login.html">Log in</a>
+      <a class="cta" href="/signup.html">Start free</a>
+    </nav>
+  </header>
+  <main>
+    <section class="hero">
+      <h1>Get paid faster, without the spreadsheets.</h1>
+      <p>Ledgerly is invoicing and client tracking built for freelancers and small studios. Create an invoice in 30 seconds, track who owes what, see your revenue at a glance.</p>
+      <a class="btn primary" href="/signup.html">Start your free account</a>
+    </section>
+
+    <div class="features">
+      <div class="feature"><h3>Client tracking</h3><p>Keep every client and their contact info in one place.</p></div>
+      <div class="feature"><h3>One-click invoices</h3><p>Draft, send, and mark invoices paid without a template file.</p></div>
+      <div class="feature"><h3>Revenue at a glance</h3><p>See outstanding balance and monthly revenue the moment you log in.</p></div>
+    </div>
+
+    <h2 style="text-align:center; margin-top: 3rem;">Simple pricing</h2>
+    <div class="pricing">
+      <div class="plan">
+        <h3>Starter</h3>
+        <div class="amount">$0</div>
+        <p>Up to 5 invoices/mo</p>
+      </div>
+      <div class="plan featured">
+        <h3>Pro</h3>
+        <div class="amount">$19/mo</div>
+        <p>Unlimited invoices &amp; clients</p>
+      </div>
+      <div class="plan">
+        <h3>Studio</h3>
+        <div class="amount">$49/mo</div>
+        <p>Multiple team members</p>
+      </div>
+    </div>
+    <p style="text-align:center; opacity:0.6; font-size:0.85rem; margin-top:1rem;">This demo only implements the Starter tier's functionality &mdash; billing for paid tiers isn't wired up.</p>
+  </main>
+  <footer class="site">&copy; <span id="year"></span> Ledgerly</footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

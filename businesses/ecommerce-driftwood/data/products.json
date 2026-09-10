@@ -1,0 +1,82 @@
+[
+  {
+    "id": "p1",
+    "name": "Driftwood Lounge Chair",
+    "category": "Furniture",
+    "price": 429.00,
+    "description": "Solid teak frame with weather-resistant woven rope seating, finished by hand to look like sun-bleached driftwood. Indoor or covered-outdoor use.",
+    "image": "https://picsum.photos/seed/driftwood-p1/600/600",
+    "rating": 4.8,
+    "stock": 14
+  },
+  {
+    "id": "p2",
+    "name": "Tidal Linen Duvet Set",
+    "category": "Bedding",
+    "price": 189.00,
+    "description": "Stonewashed European flax linen in a soft seafoam wash. Gets softer with every launder.",
+    "image": "https://picsum.photos/seed/driftwood-p2/600/600",
+    "rating": 4.7,
+    "stock": 40
+  },
+  {
+    "id": "p3",
+    "name": "Salt Air Ceramic Vase",
+    "category": "Decor",
+    "price": 68.00,
+    "description": "Hand-thrown stoneware vase with a matte sand glaze, made in small batches.",
+    "image": "https://picsum.photos/seed/driftwood-p3/600/600",
+    "rating": 4.9,
+    "stock": 62
+  },
+  {
+    "id": "p4",
+    "name": "Harbor Rope Pendant Light",
+    "category": "Lighting",
+    "price": 154.00,
+    "description": "Natural jute-wrapped pendant with a warm dimmable LED bulb included.",
+    "image": "https://picsum.photos/seed/driftwood-p4/600/600",
+    "rating": 4.6,
+    "stock": 27
+  },
+  {
+    "id": "p5",
+    "name": "Coastal Oak Dining Table",
+    "category": "Furniture",
+    "price": 899.00,
+    "description": "Solid white oak table with a whitewashed finish, seats six comfortably.",
+    "image": "https://picsum.photos/seed/driftwood-p5/600/600",
+    "rating": 4.9,
+    "stock": 8
+  },
+  {
+    "id": "p6",
+    "name": "Sea Glass Throw Blanket",
+    "category": "Bedding",
+    "price": 79.00,
+    "description": "Recycled-cotton knit throw in a soft sea-glass green, woven in Portugal.",
+    "image": "https://picsum.photos/seed/driftwood-p6/600/600",
+    "rating": 4.5,
+    "stock": 55
+  },
+  {
+    "id": "p7",
+    "name": "Woven Seagrass Storage Basket",
+    "category": "Decor",
+    "price": 45.00,
+    "description": "Hand-woven seagrass basket with leather handles, set of two sizes.",
+    "image": "https://picsum.photos/seed/driftwood-p7/600/600",
+    "rating": 4.7,
+    "stock": 73
+  },
+  {
+    "id": "p8",
+    "name": "Lighthouse Table Lamp",
+    "category": "Lighting",
+    "price": 112.00,
+    "description": "Brushed brass base with a linen drum shade, three-way dimmer switch.",
+    "image": "https://picsum.photos/seed/driftwood-p8/600/600",
+    "rating": 4.6,
+    "stock": 31
+  }
+]

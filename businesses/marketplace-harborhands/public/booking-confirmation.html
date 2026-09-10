@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Booking Confirmed &mdash; HarborHands</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <main>
+    <div class="confirmation" id="content">Loading&hellip;</div>
+  </main>
+
+  <script src="/app.js"></script>
+  <script>
+    const id = new URLSearchParams(location.search).get('id');
+
+    async function load() {
+      const res = await fetch(`/api/bookings/${id}`);
+      const content = document.getElementById('content');
+      if (!res.ok) {
+        content.innerHTML = '<h2>Booking not found</h2>';
+        return;
+      }
+      const b = await res.json();
+      content.innerHTML = `
+        <div class="check">&#10003;</div>
+        <h1>Booking confirmed, ${b.customerName}!</h1>
+        <p><strong>${b.providerName}</strong> on ${b.date} at ${b.time} (${b.hours} hr)</p>
+        <p>Total: <strong>${money(b.total)}</strong> (includes ${money(b.platformFee)} platform fee)</p>
+        <p>A confirmation would normally be emailed to ${b.email}.</p>
+        <a class="btn primary" style="max-width:220px; margin: 1rem auto 0; display:block;" href="/">Browse more</a>
+      `;
+    }
+
+    load();
+  </script>
+</body>
+</html>

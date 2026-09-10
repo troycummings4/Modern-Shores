@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Become a Provider &mdash; HarborHands</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <main>
+    <h1>Become a HarborHands provider</h1>
+    <p>List your service and start getting bookings. Applications are reviewed before going live (this demo just marks new listings as "pending").</p>
+    <div class="error-box" id="error" style="display:none;"></div>
+    <div id="success" style="display:none;" class="confirmation">
+      <div class="check">&#10003;</div>
+      <h2>Application received</h2>
+      <p>Your listing is pending review. A real deployment would notify you by email once approved.</p>
+    </div>
+    <form class="apply-form" id="apply-form">
+      <label for="name">Business name</label>
+      <input id="name" required />
+      <label for="category">Category</label>
+      <select id="category" required>
+        <option>Cleaning</option>
+        <option>Landscaping</option>
+        <option>Handyman</option>
+        <option>Pet Care</option>
+        <option>Moving</option>
+        <option>Photography</option>
+      </select>
+      <label for="city">City</label>
+      <input id="city" required />
+      <label for="email">Email</label>
+      <input id="email" type="email" required />
+      <label for="hourlyRate">Hourly rate ($)</label>
+      <input id="hourlyRate" type="number" min="1" step="0.01" required />
+      <label for="bio">Short bio</label>
+      <textarea id="bio" rows="3"></textarea>
+      <button class="primary" type="submit" style="margin-top:1.25rem;">Submit application</button>
+    </form>
+  </main>
+
+  <script src="/app.js"></script>
+  <script>
+    document.getElementById('apply-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const errorBox = document.getElementById('error');
+      errorBox.style.display = 'none';
+      const res = await fetch('/api/providers', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: document.getElementById('name').value,
+          category: document.getElementById('category').value,
+          city: document.getElementById('city').value,
+          email: document.getElementById('email').value,
+          hourlyRate: document.getElementById('hourlyRate').value,
+          bio: document.getElementById('bio').value,
+        }),
+      });
+      const data = await res.json();
+      if (!res.ok) {
+        errorBox.textContent = data.error;
+        errorBox.style.display = 'block';
+        return;
+      }
+      document.getElementById('apply-form').style.display = 'none';
+      document.getElementById('success').style.display = 'block';
+    });
+  </script>
+</body>
+</html>

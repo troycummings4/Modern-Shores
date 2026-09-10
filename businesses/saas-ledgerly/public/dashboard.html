@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dashboard &mdash; Ledgerly</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="site">
+    <a class="logo" href="/">Ledgerly</a>
+    <nav>
+      <span id="company-name" style="margin-right: 1rem; opacity: 0.7;"></span>
+      <button class="secondary" id="logout-btn">Log out</button>
+    </nav>
+  </header>
+  <main>
+    <div class="stat-row" id="stats"></div>
+
+    <div class="panel">
+      <h2>Clients</h2>
+      <form class="inline-form" id="client-form">
+        <div><label>Name</label><input id="client-name" required /></div>
+        <div><label>Email</label><input id="client-email" type="email" /></div>
+        <button class="primary" type="submit">Add client</button>
+      </form>
+      <table class="data-table" style="margin-top:1rem;">
+        <thead><tr><th>Name</th><th>Email</th></tr></thead>
+        <tbody id="clients-body"></tbody>
+      </table>
+    </div>
+
+    <div class="panel">
+      <h2>Invoices</h2>
+      <form class="inline-form" id="invoice-form">
+        <div>
+          <label>Client</label>
+          <select id="invoice-client" required></select>
+        </div>
+        <div><label>Description</label><input id="invoice-desc" required /></div>
+        <div><label>Amount ($)</label><input id="invoice-amount" type="number" min="0.01" step="0.01" required /></div>
+        <div><label>Due date</label><input id="invoice-due" type="date" /></div>
+        <button class="primary" type="submit">Create invoice</button>
+      </form>
+      <div class="error-box" id="invoice-error" style="display:none; margin-top:1rem;"></div>
+      <table class="data-table" style="margin-top:1rem;">
+        <thead><tr><th>Client</th><th>Description</th><th>Amount</th><th>Due</th><th>Status</th><th></th></tr></thead>
+        <tbody id="invoices-body"></tbody>
+      </table>
+    </div>
+  </main>
+
+  <script>
+    function money(n) { return `$${Number(n).toFixed(2)}`; }
+    let clients = [];
+
+    async function api(path, options) {
+      const res = await fetch(path, {
+        headers: { 'Content-Type': 'application/json' },
+        ...options,
+      });
+      if (res.status === 401) {
+        location.href = '/login.html';
+        throw new Error('Not authenticated');
+      }
+      return res;
+    }
+
+    async function loadMe() {
+      const res = await api('/api/me');
+      const me = await res.json();
+      document.getElementById('company-name').textContent = me.companyName;
+    }
+
+    async function loadStats() {
+      const res = await api('/api/summary');
+      const s = await res.json();
+      document.getElementById('stats').innerHTML = `
+        <div class="stat-card"><div class="label">Outstanding</div><div class="value">${money(s.outstanding)}</div></div>
+        <div class="stat-card"><div class="label">Total Paid</div><div class="value">${money(s.paid)}</div></div>
+        <div class="stat-card"><div class="label">Revenue This Month</div><div class="value">${money(s.revenueThisMonth)}</div></div>
+        <div class="stat-card"><div class="label">Invoices</div><div class="value">${s.invoiceCount}</div></div>
+      `;
+    }
+
+    async function loadClients() {
+      const res = await api('/api/clients');
+      clients = await res.json();
+      document.getElementById('clients-body').innerHTML = clients.map((c) => `
+        <tr><td>${c.name}</td><td>${c.email || '&mdash;'}</td></tr>
+      `).join('') || '<tr><td colspan="2" style="opacity:0.6;">No clients yet</td></tr>';
+
+      const select = document.getElementById('invoice-client');
+      select.innerHTML = clients.map((c) => `<option value="${c.id}">${c.name}</option>`).join('');
+    }
+
+    async function loadInvoices() {
+      const res = await api('/api/invoices');
+      const invoices = await res.json();
+      document.getElementById('invoices-body').innerHTML = invoices.map((i) => `
+        <tr>
+          <td>${i.clientName}</td>
+          <td>${i.description}</td>
+          <td>${money(i.amount)}</td>
+          <td>${i.dueDate || '&mdash;'}</td>
+          <td><span class="badge ${i.status}">${i.status}</span></td>
+          <td>${i.status === 'unpaid' ? `<button class="secondary" data-id="${i.id}" data-action="mark-paid">Mark paid</button>` : ''}</td>
+        </tr>
+      `).join('') || '<tr><td colspan="6" style="opacity:0.6;">No invoices yet</td></tr>';
+
+      document.querySelectorAll('[data-action="mark-paid"]').forEach((btn) => {
+        btn.addEventListener('click', async () => {
+          await api(`/api/invoices/${btn.dataset.id}`, { method: 'PATCH', body: JSON.stringify({ status: 'paid' }) });
+          await Promise.all([loadInvoices(), loadStats()]);
+        });
+      });
+    }
+
+    document.getElementById('client-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      await api('/api/clients', {
+        method: 'POST',
+        body: JSON.stringify({
+          name: document.getElementById('client-name').value,
+          email: document.getElementById('client-email').value,
+        }),
+      });
+      document.getElementById('client-form').reset();
+      await loadClients();
+    });
+
+    document.getElementById('invoice-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const errorBox = document.getElementById('invoice-error');
+      errorBox.style.display = 'none';
+      const res = await api('/api/invoices', {
+        method: 'POST',
+        body: JSON.stringify({
+          clientId: document.getElementById('invoice-client').value,
+          description: document.getElementById('invoice-desc').value,
+          amount: document.getElementById('invoice-amount').value,
+          dueDate: document.getElementById('invoice-due').value,
+        }),
+      });
+      const data = await res.json();
+      if (!res.ok) {
+        errorBox.textContent = data.error;
+        errorBox.style.display = 'block';
+        return;
+      }
+      document.getElementById('invoice-form').reset();
+      await Promise.all([loadInvoices(), loadStats()]);
+    });
+
+    document.getElementById('logout-btn').addEventListener('click', async () => {
+      await api('/api/auth/logout', { method: 'POST' });
+      location.href = '/';
+    });
+
+    (async function init() {
+      await loadMe();
+      if (clients.length === 0) await loadClients();
+      await Promise.all([loadStats(), loadInvoices()]);
+    })();
+  </script>
+</body>
+</html>

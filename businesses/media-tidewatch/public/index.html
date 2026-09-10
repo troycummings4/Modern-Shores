@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tidewatch &mdash; Coastal Living &amp; the Sea</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <main>
+    <div class="masthead">
+      <h1 style="font-size: 2.2rem; margin: 0;">Tidewatch</h1>
+      <p>A weekly dispatch about coastal living, ocean life, and the people who work the water &mdash; for readers who'd rather read one good piece than scroll ten.</p>
+    </div>
+
+    <p class="stat-line" id="subscriber-line"></p>
+
+    <div class="article-list" id="article-list">Loading&hellip;</div>
+
+    <div id="subscribe-container"></div>
+  </main>
+
+  <script src="/app.js"></script>
+  <script>
+    async function loadArticles() {
+      const res = await fetch('/api/articles');
+      const articles = await res.json();
+      document.getElementById('article-list').innerHTML = articles.map((a) => `
+        <a class="article-card" href="/article.html?slug=${a.slug}">
+          <img src="${a.image}" alt="${a.title}" />
+          <div>
+            <div class="category">${a.category}</div>
+            <h2>${a.title}</h2>
+            <p>${a.excerpt}</p>
+            <div class="meta">${a.author} &middot; ${formatDate(a.publishedAt)}</div>
+          </div>
+        </a>
+      `).join('');
+    }
+
+    async function loadSubscriberCount() {
+      const res = await fetch('/api/subscribers/count');
+      const data = await res.json();
+      document.getElementById('subscriber-line').textContent = `Joined by ${data.count.toLocaleString()} coastal-living readers`;
+    }
+
+    loadArticles();
+    loadSubscriberCount();
+    renderSubscribeBox(document.getElementById('subscribe-container'));
+  </script>
+</body>
+</html>

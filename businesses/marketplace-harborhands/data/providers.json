@@ -1,0 +1,98 @@
+[
+  {
+    "id": "prov1",
+    "name": "Clearwater Cleaning Co.",
+    "category": "Cleaning",
+    "city": "Portland, ME",
+    "bio": "Eco-friendly home cleaning, 8 years in business, fully insured. Specializes in move-in/move-out deep cleans.",
+    "hourlyRate": 45,
+    "rating": 4.9,
+    "reviewCount": 212,
+    "image": "https://picsum.photos/seed/harbor-1/500/400",
+    "status": "approved"
+  },
+  {
+    "id": "prov2",
+    "name": "Salt & Soil Landscaping",
+    "category": "Landscaping",
+    "city": "Portsmouth, NH",
+    "bio": "Coastal-climate landscaping and lawn care. Salt-tolerant plantings a specialty.",
+    "hourlyRate": 60,
+    "rating": 4.8,
+    "reviewCount": 143,
+    "image": "https://picsum.photos/seed/harbor-2/500/400",
+    "status": "approved"
+  },
+  {
+    "id": "prov3",
+    "name": "Anchor Point Handyman",
+    "category": "Handyman",
+    "city": "Portland, ME",
+    "bio": "General repairs, furniture assembly, drywall, and small electrical. Same-week availability.",
+    "hourlyRate": 55,
+    "rating": 4.7,
+    "reviewCount": 98,
+    "image": "https://picsum.photos/seed/harbor-3/500/400",
+    "status": "approved"
+  },
+  {
+    "id": "prov4",
+    "name": "Tidepool Pet Care",
+    "category": "Pet Care",
+    "city": "Kennebunkport, ME",
+    "bio": "Dog walking, drop-in visits, and overnight pet sitting. Certified in pet first aid.",
+    "hourlyRate": 30,
+    "rating": 5,
+    "reviewCount": 176,
+    "image": "https://picsum.photos/seed/harbor-4/500/400",
+    "status": "approved"
+  },
+  {
+    "id": "prov5",
+    "name": "Coastal Movers",
+    "category": "Moving",
+    "city": "Portsmouth, NH",
+    "bio": "Local moves, two-person crew with truck included. Careful with fragile and antique items.",
+    "hourlyRate": 90,
+    "rating": 4.6,
+    "reviewCount": 64,
+    "image": "https://picsum.photos/seed/harbor-5/500/400",
+    "status": "approved"
+  },
+  {
+    "id": "prov6",
+    "name": "Harborlight Photography",
+    "category": "Photography",
+    "city": "Camden, ME",
+    "bio": "Real estate, family, and small-event photography with same-week turnaround on edits.",
+    "hourlyRate": 120,
+    "rating": 4.9,
+    "reviewCount": 87,
+    "image": "https://picsum.photos/seed/harbor-6/500/400",
+    "status": "approved"
+  },
+  {
+    "id": "prov7",
+    "name": "Bright Shore Cleaning",
+    "category": "Cleaning",
+    "city": "Kennebunkport, ME",
+    "bio": "Weekly and biweekly recurring home cleaning plans, plus one-off deep cleans.",
+    "hourlyRate": 40,
+    "rating": 4.7,
+    "reviewCount": 131,
+    "image": "https://picsum.photos/seed/harbor-7/500/400",
+    "status": "approved"
+  },
+  {
+    "id": "prov8",
+    "name": "Rocky Coast Handyman",
+    "category": "Handyman",
+    "city": "Camden, ME",
+    "bio": "Deck repair, gutter cleaning, and seasonal home prep for coastal properties.",
+    "hourlyRate": 58,
+    "rating": 4.8,
+    "reviewCount": 76,
+    "image": "https://picsum.photos/seed/harbor-8/500/400",
+    "status": "approved"
+  }
+]

@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Product &mdash; Driftwood Supply Co.</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <main id="content">
+    <p>Loading&hellip;</p>
+  </main>
+
+  <script src="/app.js"></script>
+  <script>
+    const params = new URLSearchParams(location.search);
+    const id = params.get('id');
+
+    async function load() {
+      const res = await fetch(`/api/products/${id}`);
+      const content = document.getElementById('content');
+      if (!res.ok) {
+        content.innerHTML = '<div class="empty-state"><h2>Product not found</h2><a class="btn primary" href="/">Back to shop</a></div>';
+        return;
+      }
+      const p = await res.json();
+      content.innerHTML = `
+        <div class="product-detail">
+          <img src="${p.image}" alt="${p.name}" />
+          <div>
+            <div class="category">${p.category}</div>
+            <h1>${p.name}</h1>
+            <div class="rating">&#9733; ${p.rating}</div>
+            <div class="price">${money(p.price)}</div>
+            <p>${p.description}</p>
+            <p>${p.stock > 0 ? `${p.stock} in stock` : '<strong>Out of stock</strong>'}</p>
+            <div class="qty-row">
+              <label for="qty">Qty</label>
+              <input id="qty" type="number" min="1" max="${p.stock}" value="1" />
+            </div>
+            <button class="primary" id="add-btn" ${p.stock === 0 ? 'disabled' : ''}>Add to Cart</button>
+            <p id="added-msg" style="display:none; color: #2e5f6b; font-weight: 600; margin-top: 0.75rem;">Added to cart &mdash; <a href="/cart.html">view cart</a></p>
+          </div>
+        </div>
+      `;
+
+      document.getElementById('add-btn').addEventListener('click', () => {
+        const qty = Math.max(1, Math.min(p.stock, parseInt(document.getElementById('qty').value, 10) || 1));
+        addToCart(p.id, qty);
+        document.getElementById('added-msg').style.display = 'block';
+      });
+    }
+
+    load();
+  </script>
+</body>
+</html>

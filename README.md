@@ -11,6 +11,32 @@ revenue per sale at the same traffic and the same commission rate.
 
 Built with React + TypeScript + Vite + Tailwind CSS.
 
+## Other business concepts in this repo
+
+Beyond the affiliate store above, `businesses/` contains four additional,
+independently runnable web apps — one per industry, each a real full-stack
+demo (Express backend + persisted data + working frontend), not a mockup:
+
+| App | Industry | Run | Port |
+|---|---|---|---|
+| [`ecommerce-driftwood`](businesses/ecommerce-driftwood) | DTC e-commerce (home goods) | `npm install && npm start` | 3001 |
+| [`saas-ledgerly`](businesses/saas-ledgerly) | SaaS (invoicing for freelancers) | `npm install && npm start` | 3002 |
+| [`media-tidewatch`](businesses/media-tidewatch) | Content/media (coastal newsletter) | `npm install && npm start` | 3003 |
+| [`marketplace-harborhands`](businesses/marketplace-harborhands) | Two-sided marketplace (local services) | `npm install && npm start` | 3004 |
+
+Each is fully self-contained (own `package.json`, own JSON-file database
+under its `data/` folder, no shared dependencies) — `cd` into one and run
+the two commands to have it live at `http://localhost:<port>`. Each app's
+own README explains its business model, what's real vs. simulated (e.g. no
+app here actually charges a credit card), and its API.
+
+**On the "billion dollar company" framing:** none of these guarantee a
+valuation or revenue — that depends on real execution, capital, and market
+demand that no code can produce on its own. What's here is a legitimate,
+working starting point for each business model (the product/ordering/
+booking logic a real company in that space would actually need), built so
+you can run, test, and extend it yourself.
+
 ## What's included
 
 - **Home page** — hero, shop-by-category grid, flash-sale countdown bar,

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HarborHands &mdash; Local Home Services</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <main>
+    <section class="hero">
+      <h1>Trusted local help, booked in minutes.</h1>
+      <p>Cleaning, landscaping, handyman work, pet care, moving, and photography &mdash; vetted local providers you can book directly.</p>
+    </section>
+
+    <div class="filters" id="filters"></div>
+    <div class="grid" id="provider-grid"></div>
+  </main>
+
+  <script src="/app.js"></script>
+  <script>
+    const CATEGORIES = ['All', 'Cleaning', 'Landscaping', 'Handyman', 'Pet Care', 'Moving', 'Photography'];
+    let activeCategory = 'All';
+
+    function renderFilters() {
+      const filters = document.getElementById('filters');
+      filters.innerHTML = CATEGORIES.map(
+        (c) => `<button data-cat="${c}" class="${c === activeCategory ? 'active' : ''}">${c}</button>`
+      ).join('');
+      filters.querySelectorAll('button').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          activeCategory = btn.dataset.cat;
+          renderFilters();
+          loadProviders();
+        });
+      });
+    }
+
+    async function loadProviders() {
+      const url = activeCategory === 'All' ? '/api/providers' : `/api/providers?category=${encodeURIComponent(activeCategory)}`;
+      const res = await fetch(url);
+      const providers = await res.json();
+      document.getElementById('provider-grid').innerHTML = providers.map((p) => `
+        <a class="card" href="/provider.html?id=${p.id}">
+          <img src="${p.image}" alt="${p.name}" />
+          <div class="body">
+            <div class="category">${p.category}</div>
+            <h3>${p.name}</h3>
+            <div class="city">${p.city}</div>
+            <div class="rating">&#9733; ${p.rating} (${p.reviewCount})</div>
+            <div class="rate">${money(p.hourlyRate)}/hr</div>
+          </div>
+        </a>
+      `).join('');
+    }
+
+    renderFilters();
+    loadProviders();
+  </script>
+</body>
+</html>

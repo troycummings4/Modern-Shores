@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Driftwood Supply Co. &mdash; Coastal-Modern Home Goods</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <main>
+    <section class="hero">
+      <h1>Coastal-modern, made to last.</h1>
+      <p>Small-batch furniture, lighting, and decor inspired by weathered shorelines. Free shipping over $150.</p>
+    </section>
+
+    <div class="filters" id="filters"></div>
+    <div class="grid" id="product-grid"></div>
+  </main>
+
+  <script src="/app.js"></script>
+  <script>
+    const CATEGORIES = ['All', 'Furniture', 'Bedding', 'Decor', 'Lighting'];
+    let activeCategory = 'All';
+
+    function renderFilters() {
+      const filters = document.getElementById('filters');
+      filters.innerHTML = CATEGORIES.map(
+        (c) => `<button data-cat="${c}" class="${c === activeCategory ? 'active' : ''}">${c}</button>`
+      ).join('');
+      filters.querySelectorAll('button').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          activeCategory = btn.dataset.cat;
+          renderFilters();
+          loadProducts();
+        });
+      });
+    }
+
+    async function loadProducts() {
+      const url = activeCategory === 'All' ? '/api/products' : `/api/products?category=${encodeURIComponent(activeCategory)}`;
+      const res = await fetch(url);
+      const products = await res.json();
+      const grid = document.getElementById('product-grid');
+      grid.innerHTML = products
+        .map(
+          (p) => `
+        <a class="card" href="/product.html?id=${p.id}">
+          <img src="${p.image}" alt="${p.name}" />
+          <div class="body">
+            <div class="category">${p.category}</div>
+            <h3>${p.name}</h3>
+            <div class="price">${money(p.price)}</div>
+          </div>
+        </a>`
+        )
+        .join('');
+    }
+
+    renderFilters();
+    loadProducts();
+  </script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "name": "driftwood-supply-co",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Driftwood Supply Co. - coastal-modern home goods DTC store",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}

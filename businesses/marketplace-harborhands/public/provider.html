@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Provider &mdash; HarborHands</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <main id="content">
+    <p>Loading&hellip;</p>
+  </main>
+
+  <script src="/app.js"></script>
+  <script>
+    const id = new URLSearchParams(location.search).get('id');
+    let provider;
+
+    function updateEstimate() {
+      const hours = Math.max(1, Math.min(8, parseInt(document.getElementById('hours').value, 10) || 1));
+      const payout = provider.hourlyRate * hours;
+      const fee = Math.round(payout * 0.15 * 100) / 100;
+      const total = Math.round((payout + fee) * 100) / 100;
+      document.getElementById('estimate').innerHTML = `
+        <div class="fee-line"><span>${hours} hr &times; ${money(provider.hourlyRate)}</span><span>${money(payout)}</span></div>
+        <div class="fee-line"><span>Service fee (15%)</span><span>${money(fee)}</span></div>
+        <div class="fee-line total"><span>Total</span><span>${money(total)}</span></div>
+      `;
+    }
+
+    async function load() {
+      const res = await fetch(`/api/providers/${id}`);
+      const content = document.getElementById('content');
+      if (!res.ok) {
+        content.innerHTML = '<div class="error-box">Provider not found</div><a href="/">Back to browse</a>';
+        return;
+      }
+      provider = await res.json();
+      content.innerHTML = `
+        <div class="provider-detail">
+          <div>
+            <img src="${provider.image}" alt="${provider.name}" />
+            <div class="category">${provider.category}</div>
+            <h1>${provider.name}</h1>
+            <div class="city">${provider.city}</div>
+            <div class="rating">&#9733; ${provider.rating} (${provider.reviewCount} reviews)</div>
+            <p>${provider.bio}</p>
+            <div class="rate">${money(provider.hourlyRate)}/hr</div>
+          </div>
+          <div class="booking-panel">
+            <h3>Book this provider</h3>
+            <div class="error-box" id="error" style="display:none;"></div>
+            <form id="booking-form">
+              <label for="date">Date</label>
+              <input id="date" type="date" required />
+              <label for="time">Time</label>
+              <input id="time" type="time" required />
+              <label for="hours">Hours</label>
+              <input id="hours" type="number" min="1" max="8" value="2" />
+              <label for="name">Your name</label>
+              <input id="name" required />
+              <label for="email">Email</label>
+              <input id="email" type="email" required />
+              <label for="notes">Notes (optional)</label>
+              <textarea id="notes" rows="2"></textarea>
+              <div id="estimate" style="margin-top:1rem;"></div>
+              <button class="primary" type="submit" style="margin-top:1rem;">Request booking</button>
+            </form>
+          </div>
+        </div>
+      `;
+      document.getElementById('hours').addEventListener('input', updateEstimate);
+      updateEstimate();
+
+      document.getElementById('booking-form').addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const errorBox = document.getElementById('error');
+        errorBox.style.display = 'none';
+        const res = await fetch('/api/bookings', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            providerId: provider.id,
+            date: document.getElementById('date').value,
+            time: document.getElementById('time').value,
+            hours: document.getElementById('hours').value,
+            customerName: document.getElementById('name').value,
+            email: document.getElementById('email').value,
+            notes: document.getElementById('notes').value,
+          }),
+        });
+        const data = await res.json();
+        if (!res.ok) {
+          errorBox.textContent = data.error;
+          errorBox.style.display = 'block';
+          return;
+        }
+        location.href = `/booking-confirmation.html?id=${data.id}`;
+      });
+    }
+
+    load();
+  </script>
+</body>
+</html>

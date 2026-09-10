@@ -1,0 +1,64 @@
+:root {
+  --ink: #1c2733;
+  --harbor: #1e6091;
+  --harbor-dark: #164a70;
+  --amber: #e08e2b;
+  --bg: #f4f7f9;
+  --line: #dde5ea;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); line-height: 1.5; }
+a { color: var(--harbor-dark); }
+
+header.site {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1.25rem 2rem; background: #fff; border-bottom: 1px solid var(--line);
+}
+header.site .logo { font-weight: 800; font-size: 1.3rem; text-decoration: none; color: var(--ink); }
+header.site nav a { margin-left: 1.25rem; text-decoration: none; font-weight: 600; color: var(--ink); }
+header.site nav a.cta { background: var(--harbor); color: white; padding: 0.5rem 1.1rem; border-radius: 8px; }
+
+main { max-width: 1100px; margin: 0 auto; padding: 2rem; }
+
+.hero { text-align: center; padding: 3rem 1rem; }
+.hero h1 { font-size: 2.3rem; margin-bottom: 0.5rem; }
+.hero p { opacity: 0.75; max-width: 560px; margin: 0 auto; font-size: 1.1rem; }
+
+.filters { display: flex; gap: 0.5rem; flex-wrap: wrap; margin: 1.5rem 0; justify-content: center; }
+.filters button { border: 1px solid var(--line); background: #fff; padding: 0.45rem 1.1rem; border-radius: 999px; cursor: pointer; font-size: 0.9rem; }
+.filters button.active { background: var(--harbor); color: white; border-color: var(--harbor); }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }
+.card { background: #fff; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; text-decoration: none; color: inherit; transition: transform 0.15s ease, box-shadow 0.15s ease; }
+.card:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.08); }
+.card img { width: 100%; height: 150px; object-fit: cover; }
+.card .body { padding: 1rem; }
+.card .category { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--harbor-dark); font-weight: 700; }
+.card h3 { margin: 0.3rem 0; font-size: 1.05rem; }
+.card .city { font-size: 0.85rem; opacity: 0.6; }
+.card .rate { font-weight: 700; margin-top: 0.4rem; }
+.card .rating { color: var(--amber); font-size: 0.9rem; }
+
+.provider-detail { display: grid; grid-template-columns: 1fr 340px; gap: 2.5rem; align-items: start; }
+.provider-detail img { width: 100%; border-radius: 12px; }
+.provider-detail .rate { font-size: 1.4rem; font-weight: 800; color: var(--harbor-dark); }
+
+.booking-panel { background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 1.5rem; position: sticky; top: 90px; }
+.booking-panel h3 { margin-top: 0; }
+.booking-panel label { display: block; margin: 0.8rem 0 0.3rem; font-weight: 600; font-size: 0.9rem; }
+.booking-panel input, .booking-panel select, .booking-panel textarea { width: 100%; padding: 0.55rem; border: 1px solid var(--line); border-radius: 6px; font-size: 0.95rem; }
+.fee-line { display: flex; justify-content: space-between; font-size: 0.9rem; margin-top: 0.3rem; opacity: 0.75; }
+.fee-line.total { font-weight: 700; opacity: 1; font-size: 1.05rem; border-top: 1px solid var(--line); padding-top: 0.5rem; margin-top: 0.6rem; }
+
+button.primary, .btn.primary { background: var(--harbor); color: white; border: none; padding: 0.75rem 1.5rem; border-radius: 8px; font-size: 1rem; cursor: pointer; font-weight: 600; text-decoration: none; display: inline-block; width: 100%; text-align: center; }
+button.primary:hover, .btn.primary:hover { background: var(--harbor-dark); }
+
+form.apply-form { max-width: 480px; }
+form.apply-form label { display: block; margin: 0.9rem 0 0.3rem; font-weight: 600; font-size: 0.9rem; }
+form.apply-form input, form.apply-form select, form.apply-form textarea { width: 100%; padding: 0.6rem; border: 1px solid var(--line); border-radius: 6px; font-size: 1rem; }
+
+.error-box { background: #fdecea; color: #a33; padding: 0.75rem 1rem; border-radius: 8px; margin: 1rem 0; }
+.confirmation { text-align: center; padding: 3rem 1rem; }
+.confirmation .check { font-size: 3rem; }
+footer.site { text-align: center; padding: 2rem; opacity: 0.6; font-size: 0.85rem; }

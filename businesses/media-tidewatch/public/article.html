@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tidewatch</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <main>
+    <article class="article-full" id="content">Loading&hellip;</article>
+    <div id="subscribe-container"></div>
+  </main>
+
+  <script src="/app.js"></script>
+  <script>
+    const slug = new URLSearchParams(location.search).get('slug');
+
+    async function load() {
+      const res = await fetch(`/api/articles/${slug}`);
+      const content = document.getElementById('content');
+      if (!res.ok) {
+        content.innerHTML = '<h1>Article not found</h1><a href="/">Back to Tidewatch</a>';
+        return;
+      }
+      const a = await res.json();
+      document.title = `${a.title} — Tidewatch`;
+      const paragraphs = a.body.split('\n\n').map((p) => `<p>${p}</p>`).join('');
+      content.innerHTML = `
+        <div class="category">${a.category}</div>
+        <h1>${a.title}</h1>
+        <div class="meta">By ${a.author} &middot; ${formatDate(a.publishedAt)}</div>
+        <img src="${a.image}" alt="${a.title}" />
+        ${paragraphs}
+      `;
+    }
+
+    load();
+    renderSubscribeBox(document.getElementById('subscribe-container'));
+  </script>
+</body>
+</html>

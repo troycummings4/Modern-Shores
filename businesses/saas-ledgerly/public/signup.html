@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sign up &mdash; Ledgerly</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="site">
+    <a class="logo" href="/">Ledgerly</a>
+    <nav><a href="/login.html">Log in</a></nav>
+  </header>
+  <main>
+    <div class="auth-card">
+      <h1>Create your account</h1>
+      <div class="error-box" id="error" style="display:none;"></div>
+      <form id="signup-form">
+        <label for="companyName">Company / your name</label>
+        <input id="companyName" required />
+        <label for="email">Email</label>
+        <input id="email" type="email" required />
+        <label for="password">Password</label>
+        <input id="password" type="password" minlength="8" required />
+        <button class="primary" type="submit" style="margin-top:1.25rem; width:100%;">Create account</button>
+      </form>
+      <p style="margin-top:1rem; font-size:0.9rem;">Already have an account? <a href="/login.html">Log in</a></p>
+    </div>
+  </main>
+  <script>
+    document.getElementById('signup-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const errorBox = document.getElementById('error');
+      errorBox.style.display = 'none';
+      const res = await fetch('/api/auth/signup', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          companyName: document.getElementById('companyName').value,
+          email: document.getElementById('email').value,
+          password: document.getElementById('password').value,
+        }),
+      });
+      const data = await res.json();
+      if (!res.ok) {
+        errorBox.textContent = data.error;
+        errorBox.style.display = 'block';
+        return;
+      }
+      location.href = '/dashboard.html';
+    });
+  </script>
+</body>
+</html>

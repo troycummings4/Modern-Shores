@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Order Confirmed &mdash; Driftwood Supply Co.</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <main>
+    <div class="confirmation" id="content">Loading&hellip;</div>
+  </main>
+
+  <script src="/app.js"></script>
+  <script>
+    const id = new URLSearchParams(location.search).get('id');
+
+    async function load() {
+      const res = await fetch(`/api/orders/${id}`);
+      const content = document.getElementById('content');
+      if (!res.ok) {
+        content.innerHTML = '<h2>Order not found</h2>';
+        return;
+      }
+      const order = await res.json();
+      content.innerHTML = `
+        <div class="check">&#10003;</div>
+        <h1>Thank you, ${order.customer.name}!</h1>
+        <p>Your order <strong>#${order.id.slice(0, 8)}</strong> is confirmed.</p>
+        <p>Total charged: <strong>${money(order.total)}</strong></p>
+        <p>A confirmation would normally be emailed to ${order.customer.email}.</p>
+        <a class="btn primary" href="/">Continue shopping</a>
+      `;
+    }
+
+    load();
+  </script>
+</body>
+</html>

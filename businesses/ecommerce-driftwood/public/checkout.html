@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Checkout &mdash; Driftwood Supply Co.</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <main>
+    <h1>Checkout</h1>
+    <div id="error" class="error-box" style="display:none;"></div>
+    <form class="checkout-form" id="checkout-form">
+      <label for="name">Full name</label>
+      <input id="name" required />
+      <label for="email">Email</label>
+      <input id="email" type="email" required />
+      <label for="address">Shipping address</label>
+      <textarea id="address" rows="3" required></textarea>
+      <p style="opacity:0.6; font-size: 0.85rem;">This is a demo store &mdash; no real payment is collected.</p>
+      <button class="primary" type="submit" style="margin-top:1rem;">Place Order</button>
+    </form>
+  </main>
+
+  <script src="/app.js"></script>
+  <script>
+    const cart = getCart();
+    if (cart.length === 0) location.href = '/cart.html';
+
+    document.getElementById('checkout-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const errorBox = document.getElementById('error');
+      errorBox.style.display = 'none';
+
+      const body = {
+        items: cart,
+        customer: {
+          name: document.getElementById('name').value,
+          email: document.getElementById('email').value,
+          address: document.getElementById('address').value,
+        },
+      };
+
+      const res = await fetch('/api/orders', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(body),
+      });
+
+      const data = await res.json();
+      if (!res.ok) {
+        errorBox.textContent = data.error || 'Something went wrong';
+        errorBox.style.display = 'block';
+        return;
+      }
+
+      clearCart();
+      location.href = `/confirmation.html?id=${data.id}`;
+    });
+  </script>
+</body>
+</html>
